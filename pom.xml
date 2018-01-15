@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cc.momas.demo.java</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<shiro.version>1.4.0</shiro.version>
+		<quartz.version>2.2.1</quartz.version>
+		<javamail.version>1.4</javamail.version>
+		<jedis.version>2.7.2</jedis.version>
+		<activeMQ.version>5.11.2</activeMQ.version>
+		
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-all -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-all</artifactId>
+				<version>${shiro.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+			<!-- quartz对应的依赖 -->
+			<!-- <dependency> <groupId>org.quartz-scheduler</groupId> <artifactId>quartz</artifactId> 
+				<version>2.2.3</version> </dependency> <dependency> <groupId>org.quartz-scheduler</groupId> 
+				<artifactId>quartz-jobs</artifactId> <version>2.2.3</version> </dependency> -->
+
+			<!-- javaMail的依赖 -->
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>${javamail.version}</version>
+			</dependency>
+			<!-- activeMQ -->
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-all</artifactId>
+				<version>${activeMQ.version}</version>
+			</dependency>
+		</dependencies>
+
+		<!-- Redis客户端 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
+
+
+	</dependencyManagement>
+
+
+	<modules>
+		<module>shiro</module>
+		<module>quartz</module>
+		<module>thread</module>
+		<module>javamail</module>
+		<module>redis</module>
+		<module>activemq</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
