@@ -47,15 +47,6 @@
 				<version>${activeMQ.version}</version>
 			</dependency>
 		</dependencies>
-
-		<!-- Redis客户端 -->
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>${jedis.version}</version>
-		</dependency>
-
-
 	</dependencyManagement>
 
 
@@ -66,6 +57,7 @@
 		<module>javamail</module>
 		<module>redis</module>
 		<module>activemq</module>
+		<module>struts2</module>
 	</modules>
 
 	<build>
@@ -73,6 +65,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
