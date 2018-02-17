@@ -6,12 +6,7 @@
 		<artifactId>parent</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	<artifactId>quartz</artifactId>
+	<artifactId>generic</artifactId>
+	<name>泛型演示</name>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.quartz-scheduler</groupId>
-			<artifactId>quartz</artifactId>
-		</dependency>
-	</dependencies>
 </project>
