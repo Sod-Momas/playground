@@ -60,6 +60,7 @@
 		<module>struts2</module>
 		<module>generic</module>
 		<module>net</module>
+		<module>timer</module>
 	</modules>
 
 	<build>
