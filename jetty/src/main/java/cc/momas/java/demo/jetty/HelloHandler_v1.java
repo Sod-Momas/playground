@@ -1,4 +1,4 @@
-package cc.momas.java.demo.jetty.v1;
+package cc.momas.java.demo.jetty;
 
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;
@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 使用Handler处理请求
+ */
 public class HelloHandler_v1 extends AbstractHandler {
 
     private static final Logger LOG = Log.getLogger(HelloHandler_v1.class);

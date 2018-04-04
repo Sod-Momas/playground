@@ -1,7 +1,5 @@
 package cc.momas.java.demo.redis;
 
-import org.junit.Test;
-
 import redis.clients.jedis.Jedis;
 
 /**
@@ -13,8 +11,11 @@ public class MainTest {
 
 	String redisHost  = "10.10.23.128";
 	Integer redisPort = 6379;
-	
-	@Test
+
+	public static void main(String[] args) {
+		new MainTest().test1();
+	}
+
 	public void test1() {
 		
 		Jedis j = new Jedis(this.redisHost, this.redisPort);
