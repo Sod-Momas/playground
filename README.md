@@ -13,4 +13,7 @@
 * Shiro是Java的安全框架，管理权限的，还没有实现，待补坑
 * Struts2是一个MVC框架，这里提供了一点简单实现
 * Thread是Java多线程的一个demo，列举了多种情况下的线程安全问题和解决方案，后期会提供更多更深的知识内容
+* jetty是用来测试jetty内嵌服务器开发的小例子
+* properties是用来测试Properties工具类的demo
+* reflect是反射的一些基本操作
 
