@@ -16,4 +16,8 @@
 * jetty是用来测试jetty内嵌服务器开发的小例子
 * properties是用来测试Properties工具类的demo
 * reflect是反射的一些基本操作
+* generic 是泛型操作的一点演示
+* io 是java IO 流的基本操作
+* timer 是java util包中的一个工具类,这里提供一点使用方法
+
 
