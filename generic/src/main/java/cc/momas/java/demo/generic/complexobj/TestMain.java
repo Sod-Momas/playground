@@ -1,7 +1,10 @@
 package cc.momas.java.demo.generic.complexobj;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import org.junit.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,12 +15,18 @@ public class TestMain {
 	private static final TestMain THIS = new TestMain();
 	private Gson gson = new Gson();
 
-	public static void main(String[] args) {
-//		THIS.test1();
-		THIS.test2();
+	@Test
+	public void test3() throws IOException {
+		CmsPageInfo info = getPageInfo();
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.enableDefaultTyping(); // 启用类型记录，可以还原刁钻类型
+		String json = mapper.writeValueAsString(info);
+		CmsPageInfo obj = mapper.readValue(json, CmsPageInfo.class);
+		System.out.println(obj);
 	}
 
-	private void test2() {
+	@Test
+	public void test2() {
 		CmsPageInfo info = getPageInfo();
 		String json = JsonHlx.toJson(info);
 		CmsPageInfo info1 = JsonHlx.parseJsonObject(json,CmsPageInfo.class);
@@ -26,7 +35,8 @@ public class TestMain {
 		System.out.println(obj.getClass().getSimpleName());
 	}
 
-	private void test1() {
+	@Test
+	public void test1() {
 		CmsPageInfo info = getPageInfo();
 		String json = gson.toJson(info);
 		CmsPageInfo info1 = gson.fromJson(json,CmsPageInfo.class);
@@ -63,12 +73,17 @@ public class TestMain {
 	private List<CmsModuleView> findModuleView() {
 		List<CmsModuleView> list = new ArrayList<>(5);
 		for (int i = 0; i < 5; i++) {
-			list.add(getModuleView());
+//			list.add(getModuleView());
+			if(i % 2 == 0){
+				list.add(getModuleView1());
+			} else {
+				list.add(getModuleView2());
+			}
 		}
 		return list;
 	}
 
-	private CmsModuleView getModuleView() {
+	private CmsModuleView getModuleView1() {
 		CmsModuleView moduleView = new CmsModuleView();
 		moduleView.setAppId(2222);
 		moduleView.setCreateTime(new Date());
@@ -76,16 +91,19 @@ public class TestMain {
 		moduleView.setName("name");
 		moduleView.setPostListId(23);
 		moduleView.setTitle("title");
-		moduleView.list = findModuleViewItem();
+		moduleView.list = findTopic();
 		return moduleView;
 	}
-
-	private List<? extends Object> findModuleViewItem() {
-		if (System.currentTimeMillis() % 2 == 0) {
-			return findTopic();
-		} else {
-			return findHotWord();
-		}
+	private CmsModuleView getModuleView2() {
+		CmsModuleView moduleView = new CmsModuleView();
+		moduleView.setAppId(2222);
+		moduleView.setCreateTime(new Date());
+		moduleView.setId(1);
+		moduleView.setName("name");
+		moduleView.setPostListId(23);
+		moduleView.setTitle("title");
+		moduleView.list = findHotWord();
+		return moduleView;
 	}
 
 	private List<CmsTopic> findTopic() {
