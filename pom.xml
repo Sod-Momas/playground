@@ -51,6 +51,7 @@
         <module>reflect</module>
         <module>properties</module>
         <module>io</module>
+        <module>freemarker</module>
     </modules>
 
     <build>
