@@ -5,6 +5,7 @@
     <artifactId>parent</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
+    <description>测试用的父类</description>
 
     <!-- 这里放公用的依赖 -->
     <dependencies>
@@ -52,6 +53,7 @@
         <module>properties</module>
         <module>io</module>
         <module>freemarker</module>
+        <module>map</module>
     </modules>
 
     <build>
