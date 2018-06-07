@@ -25,6 +25,16 @@
             <input type="submit" value="提交">
         </p>
     </div>
+    <div>
+        <ul>
+            <li>
+                <a href="vip">vip 特权</a>
+            </li>
+            <li>
+                <a href="vip/info?userId=200">用户vip信息</a>
+            </li>
+        </ul>
+    </div>
 </form>
 </body>
 </html>
