@@ -6,7 +6,12 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Root level="error">
+
+    <Logger name="org.apache.logging.log4j.simple.SimpleLogger" level="trace">
+      <AppenderRef ref="Console"/>
+    </Logger>
+
+    <Root level="info">
       <AppenderRef ref="Console"/>
     </Root>
   </Loggers>

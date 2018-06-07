@@ -6,40 +6,39 @@ public class LoginAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 
-	private String Name;
-	private int Age;
-	private String Result;
+	private String name;
+	private int age;
+	private String result;
 
 	@Override
 	public String execute() throws Exception {
-		this.setResult("name:" + Name);
-		this.setResult(this.getResult() + "&age:" + String.valueOf(Age));
+		this.setResult("您的名字是:" + name + ",您的年龄是： " + getAge());
 		return "success";
 	}
 
 	// ------------getter   and   setter  --------------
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public int getAge() {
-		return Age;
+		return age;
 	}
 
 	public void setAge(int age) {
-		Age = age;
+		this.age = age;
 	}
 
 	public String getResult() {
-		return Result;
+		return result;
 	}
 
 	public void setResult(String result) {
-		Result = result;
+		this.result = result;
 	}
 
 }
