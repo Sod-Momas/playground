@@ -8,12 +8,15 @@
 	</parent>
 	<artifactId>redis</artifactId>
 
+	<description>一个简单的java Redis客户端</description>
+
 	<dependencies>
 		<!-- Redis客户端 -->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>2.7.2</version>
+			<version>2.9.0</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 </project>

@@ -1,9 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>cc.momas.demo.java</groupId>
     <artifactId>parent</artifactId>
     <version>0.0.1</version>
+
     <packaging>pom</packaging>
     <description>测试用的父类</description>
 
@@ -66,7 +68,7 @@
         <module>map</module>
     </modules>
 
-    <build>
+<!--    <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -78,5 +80,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>

@@ -21,11 +21,10 @@ public class TicketSite implements Runnable{
 	
 	@Override
 	public void run() {
-		
-		// this.unsafe();
-//		this.sychronizedBlock();
-//		 this.sychronized();
-//		 this.lockBlock();
+		this.unsafe();
+		this.sychronizedBlock();
+		this.sychronized();
+		this.lockBlock();
 	}
 	/**
 	 * 使用锁的方式保证数据的正常访问
