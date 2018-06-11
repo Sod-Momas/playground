@@ -6,6 +6,7 @@
 直达[电梯](https://gitee.com/Sod-Momas/javaDemo/wikis/)
 
 * ActiveMQ 是JMS的一个实现
+* algorithm是一些算法的具体实现代码
 * FreeMarker 是一个老牌的模板引擎
 * generic 是泛型操作的一点演示,体现了Java泛型实现原理与特性
 * io 是java IO 流的基本操作

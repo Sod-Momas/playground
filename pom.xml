@@ -66,6 +66,7 @@
         <module>io</module>
         <module>freemarker</module>
         <module>map</module>
+        <module>algorithm</module>
     </modules>
 
 <!--    <build>
