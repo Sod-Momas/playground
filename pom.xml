@@ -66,7 +66,11 @@
         <module>io</module>
         <module>freemarker</module>
         <module>map</module>
+<<<<<<< HEAD
         <module>array</module>
+=======
+        <module>algorithm</module>
+>>>>>>> b4117f80dbf1647312a9ed13ce6c3758e6c75eb3
     </modules>
 
 <!--    <build>

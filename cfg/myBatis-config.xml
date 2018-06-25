@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--myBatis配置示例-->
+
+    <!-- 本配置文件里的${}由resource指定的文件里的键值对来替换为真实内容,可动态更新 -->
+    <properties resource="database.properties"/>
+
+    <!-- 这是 MyBatis 中极为重要的调整设置，它们会改变 MyBatis 的运行时行为 -->
+    <settings>
+        <!-- 内定的logImpl 指定 MyBatis 所用日志的具体实现，未指定时将自动查找。 -->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <typeAliases>
+        <!-- 给一个类起别名,type要用全类名 -->
+        <typeAlias type="entity.User" alias="User"/>
+    </typeAliases>
+
+    <!-- 配置环境,default指定了默认环境用development -->
+    <environments default="development">
+        <environment id="development">
+            <!--内置  type=”[UNPOOLED|POOLED|JNDI]” -->
+            <transactionManager type="JDBC"/>
+            <!-- POOLED:mybatis自带的数据源，JNDI:基于tomcat的数据源 -->
+            <dataSource type="POOLED">
+                <!-- 这里用的${}是EL表达式 -->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 告诉 MyBatis 到哪里去找映射文件(写着SQL的DAO层xml) -->
+    <mappers>
+        <mapper resource="dao/UserMapper.xml"/>
+    </mappers>
+
+</configuration>

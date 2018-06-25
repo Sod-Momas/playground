@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:beans="http://cxf.apache.org/configuration/beans"
+       xmlns:soap="http://cxf.apache.org/bindings/soap"
+       xsi:schemaLocation="http://cxf.apache.org/configuration/beans http://cxf.apache.org/schemas/configuration/cxf-beans.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+    <!--spring shiro配置文件示例-->
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <!-- 注入安全管理器对象 -->
+        <property name="securityManager" ref="securityManager"/>
+        <!-- 注入相关页面访问的URL -->
+        <!-- 登录页面 -->
+        <property name="loginUrl" value="/"/>
+        <!-- 登录成功 -->
+        <property name="successUrl" value="/index/common/index"/>
+        <!-- 未授权访问 -->
+        <property name="unauthorizedUrl" value="/unauthoriaed.jsp"/>
+        <!-- 注入URL拦截规则 -->
+        <property name="filterChainDefinitions">
+            <value>
+                /statics/** = anon
+                /user/logout = logout
+                /validatecode.jsp* = anon
+                / = anon
+                /user/login = anon
+                <!--
+                                /index/base/staff* = perms["staff"]
+                                /index/base/region* = perms["region"]
+                                /index/base/subarea* = perms["subarea"]
+                                /index/base/decidedzone* = perms["decidedzone"]
+                                /index/base/noticebill_add* = perms["noticebill_add"]
+                                /index/base/quickworkorder* = perms["quickworkorder"]
+                                /index/base/noticebill* = perms["noticebill"]
+                                /index/base/diaodu* = perms["diaodu"]
+                                -->
+                /** = authc
+            </value>
+        </property>
+    </bean>
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm">
+            <bean class="cc.momas.dms.realm.DMSRealm"></bean>
+        </property>
+    </bean>
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+</beans>
