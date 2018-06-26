@@ -58,7 +58,7 @@
         <module>activemq</module>
         <module>struts2</module>
         <module>generic</module>
-        <module>net</module>
+        <module>socket</module>
         <module>timer</module>
         <module>jetty</module>
         <module>reflect</module>
@@ -69,5 +69,6 @@
         <module>array</module>
         <module>algorithm</module>
         <module>jdbc</module>
+        <module>cookie</module>
     </modules>
 </project>
