@@ -6,5 +6,5 @@
 		<artifactId>parent</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	<artifactId>net</artifactId>
+	<artifactId>socket</artifactId>
 </project>
