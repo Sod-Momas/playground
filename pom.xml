@@ -66,24 +66,8 @@
         <module>io</module>
         <module>freemarker</module>
         <module>map</module>
-<<<<<<< HEAD
         <module>array</module>
-=======
         <module>algorithm</module>
->>>>>>> b4117f80dbf1647312a9ed13ce6c3758e6c75eb3
+        <module>jdbc</module>
     </modules>
-
-<!--    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>-->
 </project>
