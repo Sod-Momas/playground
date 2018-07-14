@@ -70,5 +70,6 @@
         <module>algorithm</module>
         <module>jdbc</module>
         <module>cookie</module>
+        <module>jersey</module>
     </modules>
 </project>

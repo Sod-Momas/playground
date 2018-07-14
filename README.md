@@ -11,6 +11,7 @@
 * generic 是泛型操作的一点演示,体现了Java泛型实现原理与特性
 * io 是java IO 流的基本操作
 * JavaMail是Java的邮件技术实现
+* jdbc是使用jdbc连接各个数据库的例子
 * Jetty是用来测试jetty内嵌服务器开发的小例子
 * map是Map和各个子类的demo,作为最常用的工具类之一,它暗藏了大量算法与思想,非常值得深入学习
 * net是Java的Socket网络编程实现
