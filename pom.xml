@@ -71,5 +71,6 @@
         <module>jdbc</module>
         <module>cookie</module>
         <module>jersey</module>
+        <module>beanvalidate</module>
     </modules>
 </project>
