@@ -18,7 +18,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
     </properties>
-    
+
     <!-- 这里放公用的依赖 -->
     <dependencies>
         <dependency>
@@ -71,6 +71,8 @@
         <module>jdbc</module>
         <module>cookie</module>
         <module>jersey</module>
+        <module>mybatis.generator</module>
         <module>beanvalidate</module>
+        <module>shiro</module>
     </modules>
 </project>
