@@ -17,7 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <struts2.version>2.5.14.1</struts2.version>
+        <struts2.version>2.5.18</struts2.version>
         <log4j2.version>2.10.0</log4j2.version>
     </properties>
 
@@ -84,7 +84,7 @@
                 <version>9.4.7.v20170914</version>
                 <configuration>
                     <webApp>
-                        <contextPath>/${build.finalName}</contextPath>
+                        <contextPath>/${project.build.finalName}</contextPath>
                     </webApp>
                     <stopKey>CTRL+C</stopKey>
                     <stopPort>8999</stopPort>
