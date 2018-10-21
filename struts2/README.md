@@ -10,10 +10,10 @@
 ```sh
 mvn jetty:run
 ```
-项目就开始编译并运行了. 然后打开浏览器访问这个URL就可以访问首页了.
-```
-http://localhost:8080/basic-struts/
-```
+项目就开始编译并运行了. 然后打开浏览器访问下列任意URL就可以访问首页了.
+- `http://localhost:8080/basic-struts/index`
+- `http://localhost:8080/basic-struts/index.action`
+- `http://localhost:8080/basic-struts/index.jsp`
 
 ### 参考资料 - Reference
 
