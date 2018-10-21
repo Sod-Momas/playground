@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>struts2</groupId>
     <artifactId>struts2</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <parent>
         <groupId>cc.momas.demo.java</groupId>
@@ -11,5 +11,32 @@
         <version>0.0.1</version>
     </parent>
     <packaging>war</packaging>
+
+
+    <build>
+        <finalName>basic-struts</finalName>
+
+        <plugins>
+            <!--web 容器插件,这里使用jetty-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.7.v20170914</version>
+                <configuration>
+                    <webApp>
+                        <contextPath>/${build.finalName}</contextPath>
+                    </webApp>
+                    <stopKey>CTRL+C</stopKey>
+                    <stopPort>8999</stopPort>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <scanTargets>
+                        <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
+                    </scanTargets>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
 
 </project>
