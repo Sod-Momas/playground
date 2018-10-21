@@ -18,3 +18,4 @@ mvn jetty:run
 ### 参考资料 - Reference
 
 - [How To Create A Struts 2 Web Application](https://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html) 官方教程
+- [Hello World Using Struts 2](https://struts.apache.org/getting-started/hello-world-using-struts2.html)
