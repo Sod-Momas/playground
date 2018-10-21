@@ -1,6 +1,5 @@
 package cc.momas.java.demo.web.action;
 
-import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
 

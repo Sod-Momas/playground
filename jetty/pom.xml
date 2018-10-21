@@ -11,29 +11,33 @@
 
     <artifactId>jetty</artifactId>
 
+    <properties>
+        <jetty.version>9.3.24.v20180605</jetty.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>9.0.0.v20130308</version>
+            <version>${jetty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>9.0.0.v20130308</version>
+            <version>${jetty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-continuation</artifactId>
-            <version>9.0.0.v20130308</version>
+            <version>${jetty.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-jsp</artifactId>
-            <version>9.0.0.v20130308</version>
+            <version>${jetty.version}</version>
         </dependency>
 
     </dependencies>
