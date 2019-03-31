@@ -73,5 +73,6 @@
         <module>mybatis.generator</module>
         <module>beanvalidate</module>
         <module>shiro</module>
+        <module>okhttp</module>
     </modules>
 </project>
