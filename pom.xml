@@ -60,7 +60,6 @@
         <module>generic</module>
         <module>socket</module>
         <module>timer</module>
-        <module>jetty</module>
         <module>reflect</module>
         <module>properties</module>
         <module>io</module>

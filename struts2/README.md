@@ -10,11 +10,14 @@
 ```sh
 mvn jetty:run
 ```
+
 项目就开始编译并运行了. 然后打开浏览器访问下列任意URL就可以访问首页了.
+
 - `http://localhost:8080/basic-struts/index`
 - `http://localhost:8080/basic-struts/index.action`
 - `http://localhost:8080/basic-struts/index.jsp`
 
+退出服务器请使用 `Ctrl + C` 停止
 ### 参考资料 - Reference
 
 - [How To Create A Struts 2 Web Application](https://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html) 官方教程
