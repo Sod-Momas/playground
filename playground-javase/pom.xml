@@ -23,5 +23,6 @@
         <module>playground-spi</module>
         <module>playground-javase-collections</module>
         <module>playground-javase-reflect</module>
+        <module>playground-javase-properties</module>
     </modules>
 </project>
