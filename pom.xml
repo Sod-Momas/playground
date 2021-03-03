@@ -1,56 +1,34 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cc.momas.demo.java</groupId>
-    <artifactId>parent</artifactId>
-    <version>0.0.1</version>
-
-    <packaging>pom</packaging>
-    <description>测试用的父类</description>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-    </properties>
-
-    <!-- 这里放公用的依赖 -->
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.easymock/easymock -->
-        <dependency>
-            <groupId>org.easymock</groupId>
-            <artifactId>easymock</artifactId>
-            <version>3.4</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <!-- Import dependency management from Spring Boot -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.5.8.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <groupId>cc.momas</groupId>
+    <artifactId>playground</artifactId>
+    <version>1.0</version>
 
     <modules>
+        <module>playground-spring-log4j2</module>
+        <module>playground-hexdump</module>
+        <module>playground-easyexcel</module>
+        <module>playground-logging</module>
+        <module>playground-netty</module>
+        <module>playground-spring-cloud-netflix</module>
+        <module>playground-spring-cloud-pivotal</module>
+        <module>playground-dubbo</module>
+        <module>playground-dlock</module>
+        <module>playground-sql</module>
+        <module>playground-apache-commons</module>
+        <module>playground-apache-activemq</module>
+        <module>playground-apache-freemarker</module>
+        <module>playground-spring-webflux</module>
+        <module>playground-apache-velocity</module>
+        <module>playground-spring-framework</module>
+        <module>playground-spring-boot</module>
+        <module>playground-javase</module>
+        <module>playground-docker</module>
+<!-- 
         <module>quartz</module>
         <module>thread</module>
         <module>javamail</module>
@@ -74,5 +52,14 @@
         <module>beanvalidate</module>
         <module>shiro</module>
         <module>okhttp</module>
+     -->
     </modules>
+    <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 </project>

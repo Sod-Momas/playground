@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "0ac03cd9-3bf5-43b1-ae90-b846c3f996f8",
+		"name": "cache",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"1164\",\n    \"title\": \"test1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"8888\",\n    \"title\": \"88 desc\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"isbn\":\"8888\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "start",
+						"value": "0",
+						"type": "text"
+					},
+					{
+						"key": "end",
+						"value": "10",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/list?start=0&rows=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"list"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "rows",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"8888\",\n    \"title\": \"edited23\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"isbn\":\"8888\",\n\t\"title\":\"88 desc\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/book/del",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book",
+						"del"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>cc.momas.demo.java</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.0.1</version>
+		<artifactId>playground</artifactId>
+		<groupId>cc.momas</groupId>
+		<version>1.0</version>
 	</parent>
 	<artifactId>socket</artifactId>
 </project>
