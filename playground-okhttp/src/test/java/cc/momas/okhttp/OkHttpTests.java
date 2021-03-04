@@ -1,4 +1,4 @@
-package cc.momas;
+package cc.momas.okhttp;
 
 import okhttp3.*;
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class OkHttpTests {
 
     private static final String BASE_URL = "http://localhost:8080";
     private static final String URL_SECURED_BY_BASIC_AUTHENTICATION = "https://localhost/auth";
-    private static OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = new OkHttpClient();
 
     /**
      * Synchronous GET with OkHttp
@@ -246,7 +246,7 @@ public class OkHttpTests {
     /**
      * Do Not Follow Redirects
      * <p>
-     * In this example, we’ll see how to configure the OkHttpClient to stop following redirects.
+     * In this example, we’ll see how to configure the OkOkHttpClient to stop following redirects.
      * <p>
      * By default, if a GET request is answered with an HTTP 301 Moved Permanently the redirect is automatically followed. In some use cases, that may be perfectly fine, but there are certainly use cases where that’s not desired.
      * <p>
@@ -308,7 +308,7 @@ public class OkHttpTests {
     @Test(expected = IOException.class)
     public void whenCancelRequest_thenCorrect()
             throws IOException {
-//        Logger logger = Logger.getLogger(OkHttpTests.class.getName());
+//        Logger logger = Logger.getLogger(cc.momas.okhttp.OkHttpTests.class.getName());
 
         class Log {
             private void debug(String msg) {

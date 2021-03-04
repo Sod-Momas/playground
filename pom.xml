@@ -28,6 +28,7 @@
         <module>playground-spring-boot</module>
         <module>playground-javase</module>
         <module>playground-docker</module>
+        <module>playground-okhttp</module>
 <!--
         <module>quartz</module>
         <module>thread</module>
@@ -61,5 +62,6 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <junit.version>4.13.1</junit.version>
     </properties>
 </project>

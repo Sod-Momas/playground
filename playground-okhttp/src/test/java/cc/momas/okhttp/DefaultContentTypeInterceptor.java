@@ -1,4 +1,4 @@
-package cc.momas;
+package cc.momas.okhttp;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;
