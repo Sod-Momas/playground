@@ -24,5 +24,6 @@
         <module>playground-javase-collections</module>
         <module>playground-javase-reflect</module>
         <module>playground-javase-properties</module>
+        <module>playground-javase-socket</module>
     </modules>
 </project>

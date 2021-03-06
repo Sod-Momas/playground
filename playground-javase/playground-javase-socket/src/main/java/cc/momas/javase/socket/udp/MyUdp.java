@@ -1,4 +1,4 @@
-package cc.momas.demo.net.udp;
+package cc.momas.javase.socket.udp;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

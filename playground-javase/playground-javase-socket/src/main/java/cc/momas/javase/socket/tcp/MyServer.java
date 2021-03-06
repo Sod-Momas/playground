@@ -1,4 +1,4 @@
-package cc.momas.demo.net.tcp;
+package cc.momas.javase.socket.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
