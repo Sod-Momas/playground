@@ -1,6 +1,6 @@
-package cc.momas.demo.thread.test1;
+package cc.momas.javase.thread.test1;
 
-import cc.momas.demo.thread.test1.ticket.TicketSite;
+import cc.momas.javase.thread.test1.ticket.TicketSite;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

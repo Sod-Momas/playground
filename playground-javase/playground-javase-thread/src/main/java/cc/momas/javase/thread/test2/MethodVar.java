@@ -1,4 +1,4 @@
-package cc.momas.demo.thread.test2;
+package cc.momas.javase.thread.test2;
 
 /**
  * 这个测试检查了方法里的局部变量是否会被线程共享

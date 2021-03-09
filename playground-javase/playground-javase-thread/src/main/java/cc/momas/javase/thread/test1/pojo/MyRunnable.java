@@ -1,4 +1,4 @@
-package cc.momas.demo.thread.test1.pojo;
+package cc.momas.javase.thread.test1.pojo;
 
 public class MyRunnable implements Runnable{
 

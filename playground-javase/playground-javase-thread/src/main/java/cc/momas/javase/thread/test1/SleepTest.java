@@ -1,4 +1,4 @@
-package cc.momas.demo.thread.test1;
+package cc.momas.javase.thread.test1;
 
 public class SleepTest {
 

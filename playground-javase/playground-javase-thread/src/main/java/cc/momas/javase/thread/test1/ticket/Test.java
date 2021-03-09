@@ -1,4 +1,4 @@
-package cc.momas.demo.thread.test1.ticket;
+package cc.momas.javase.thread.test1.ticket;
 
 /**
  * 用于测试网络购票在多线程下引发的数据问题

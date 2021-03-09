@@ -1,6 +1,6 @@
-package cc.momas.demo.thread.test1;
+package cc.momas.javase.thread.test1;
 
-import cc.momas.demo.thread.test1.pojo.YeildRunableClass;
+import cc.momas.javase.thread.test1.pojo.YeildRunableClass;
 
 // 无法保证每次都可以礼让成功
 public class YieldTest {

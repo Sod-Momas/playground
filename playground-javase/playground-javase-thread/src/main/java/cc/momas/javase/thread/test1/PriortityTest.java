@@ -1,6 +1,6 @@
-package cc.momas.demo.thread.test1;
+package cc.momas.javase.thread.test1;
 
-import cc.momas.demo.thread.test1.pojo.MyThread;
+import cc.momas.javase.thread.test1.pojo.MyThread;
 
 public class PriortityTest {
 
