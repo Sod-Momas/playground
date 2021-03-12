@@ -6,26 +6,15 @@
         <artifactId>playground</artifactId>
         <groupId>cc.momas</groupId>
         <version>1.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>playground-javase</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>playground-javase-io</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-    <modules>
-        <module>playground-string</module>
-        <module>playground-lambda</module>
-        <module>playground-proxy</module>
-        <module>playground-spi</module>
-        <module>playground-javase-collections</module>
-        <module>playground-javase-reflect</module>
-        <module>playground-javase-properties</module>
-        <module>playground-javase-socket</module>
-        <module>playground-javase-thread</module>
-        <module>playground-javase-io</module>
-    </modules>
+
 </project>
