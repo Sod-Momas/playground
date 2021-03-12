@@ -25,5 +25,6 @@
         <module>playground-javase-reflect</module>
         <module>playground-javase-properties</module>
         <module>playground-javase-socket</module>
+        <module>playground-javase-thread</module>
     </modules>
 </project>
