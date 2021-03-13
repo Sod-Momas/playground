@@ -1,4 +1,4 @@
-package struts2.helloworld.model;
+package cc.momas.struts2.model;
 
 public class MessageStore {
 

@@ -1,13 +1,13 @@
-package struts2.helloworld.action;
+package cc.momas.struts2.action;
 
+import cc.momas.struts2.model.MessageStore;
 import com.opensymphony.xwork2.ActionSupport;
-import struts2.helloworld.model.MessageStore;
 
 public class HelloWorldAction extends ActionSupport {
 
     private MessageStore messageStore;
 
-    // http://localhost:8080/basic-struts/hello.action
+    // http://localhost:8080/hello.action
     public String execute() {
         messageStore = new MessageStore();
         return SUCCESS;
