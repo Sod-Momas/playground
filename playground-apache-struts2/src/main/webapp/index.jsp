@@ -13,11 +13,10 @@
     <title>Basic Struts 2 Application - Welcome</title>
 </head>
 <body>
-<h1>Welcome To Struts 2!
-    <small>欢迎使用 Struts 2!</small>
-</h1>
-
-<p><a href="<s:url action='hello'/>">Hello World</a></p>
-
+<h1> 欢迎使用 Struts 2! </h1>
+<ul>
+  <li><a href="<s:url action='hello'/>">Hello World</a></li>
+  <li><a href="<s:url action='form'/>">提交表单</a></li>
+</ul>
 </body>
 </html>

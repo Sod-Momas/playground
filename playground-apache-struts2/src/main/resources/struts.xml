@@ -2,21 +2,29 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
-
+<!-- Struts2之配置文件详解 https://blog.csdn.net/mmake1994/article/details/81587334 -->
 <struts>
-    <!--开发者模式-->
-    <constant name="struts.devMode" value="true"/>
-
-    <package name="basicstruts2" extends="struts-default">
-        <action name="index">
-            <result>/index.jsp</result>
-        </action>
+    <package name="cc.momas.struts2" extends="struts-default" namespace="/">
+        <global-results>
+            <result name="index">/index.jsp</result>
+        </global-results>
+        <action class="cc.momas.struts2.action.IndexAction" name=""/>
+        <action class="cc.momas.struts2.action.IndexAction" name="/"/>
+        <action class="cc.momas.struts2.action.IndexAction" name="/index"/>
+        <action class="cc.momas.struts2.action.IndexAction" name="/index.jsp"/>
+        <action class="cc.momas.struts2.action.IndexAction" name="/index.htm"/>
+        <action class="cc.momas.struts2.action.IndexAction" name="/index.html"/>
 
         <action name="hello" class="cc.momas.struts2.action.HelloWorldAction" method="execute">
+            <!-- http://localhost:8080/hello.action-->
             <result name="success">/HelloWorld.jsp</result>
         </action>
 
+        <action name="form" class="cc.momas.struts2.action.FormAction" method="login">
+            <result name="login">/form/login.jsp</result>
+            <result name="success">/form/ok.jsp</result>
+            <result name="error">/form/login.jsp</result>
+        </action>
 
     </package>
-
 </struts>
