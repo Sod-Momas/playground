@@ -6,24 +6,17 @@
         <artifactId>playground</artifactId>
         <groupId>cc.momas</groupId>
         <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-
+    <version>1.0</version>
     <artifactId>playground-javaee</artifactId>
-
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
+    <modules>
+        <module>playground-javaee-webapi</module>
+    </modules>
 </project>
