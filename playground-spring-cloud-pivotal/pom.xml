@@ -26,5 +26,6 @@
     <modules>
         <module>playground-scp-config-server</module>
         <module>playground-scp-config-client</module>
+        <module>playground-scp-gateway</module>
     </modules>
 </project>
