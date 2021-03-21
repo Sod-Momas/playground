@@ -1,0 +1,36 @@
+server:
+  port: 2102
+spring:
+  application:
+    name: playground-scp-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false # 自动发现注册中心的服务
+          lowerCaseServiceId: true
+      routes: # 定义路由
+        - id: playground-scn-eureka-client
+          uri: lb://playground-scn-eureka-client
+          predicates:
+            - Path=/playground-scn-eureka-client/**
+            - After=2020-01-01T00:00:00.000-07:00[Asia/Shanghai]
+          filters:
+            - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                key-resolver: '#{@requestRateLimiter}' #用于限流的键的解析器的 Bean 对象的名字。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
+                redis-rate-limiter.replenishRate: 1 #令牌桶每秒填充平均速率,允许用户每秒处理多少个请求
+                redis-rate-limiter.burstCapacity: 1 #令牌桶总容量,允许在一秒钟内完成的最大请求数
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+
+# 注册中心
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:2000/eureka/
