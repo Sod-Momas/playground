@@ -18,6 +18,7 @@
         <module>playground-scn-ribbon</module>
         <module>playground-scn-feign</module>
         <module>playground-scn-zuul</module>
+        <module>playground-scn-hystrix</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

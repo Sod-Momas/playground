@@ -12,6 +12,7 @@ playground-scn-eureka-kiana  | 2002
 playground-scn-ribbon        | 2003
 playground-scn-feign         | 2004
 playground-scn-zuul          | 2005
+playground-scn-hystrix       | 2006
 
 ## 测试url
 
@@ -25,6 +26,8 @@ playground-scn-zuul          | 2005
   2001"} 或者 {"msg":"sod from 2002"}
 - http://localhost:2005/feign/hi?name=sod 发送给zuul, zuul会转发给 feign,feign会做负载均衡给kiana和teriri, 响应内容是 {"msg":"sod from 2001"
   } 或者 {"msg":"sod from 2002"}
+- http://localhost:2006/hystrix 进行hystrix的web控制台
+- http://localhost:2006/actuator/proxy.stream 用于hystrix控制台的连接端点
 
 ## 参考资料
 
