@@ -19,6 +19,7 @@
         <module>playground-scn-feign</module>
         <module>playground-scn-zuul</module>
         <module>playground-scn-hystrix</module>
+        <module>playground-scn-turbine</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

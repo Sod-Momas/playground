@@ -13,6 +13,7 @@ playground-scn-ribbon        | 2003
 playground-scn-feign         | 2004
 playground-scn-zuul          | 2005
 playground-scn-hystrix       | 2006
+playground-scn-turbine       | 2007
 
 ## 测试url
 
