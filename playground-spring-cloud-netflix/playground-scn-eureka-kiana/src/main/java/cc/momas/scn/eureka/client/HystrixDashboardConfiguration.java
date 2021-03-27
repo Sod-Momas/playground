@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableHystrix
 @EnableCircuitBreaker
-public class HystrixConfiguration {
+public class HystrixDashboardConfiguration {
 
     /**
      * 访问地址 http://localhost:2006/actuator/hystrix.stream

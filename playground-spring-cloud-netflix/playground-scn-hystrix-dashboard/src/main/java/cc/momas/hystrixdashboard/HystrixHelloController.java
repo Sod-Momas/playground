@@ -1,4 +1,4 @@
-package cc.momas.hystrix;
+package cc.momas.hystrixdashboard;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Value;

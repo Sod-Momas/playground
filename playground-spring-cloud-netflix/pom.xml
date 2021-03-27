@@ -18,7 +18,7 @@
         <module>playground-scn-ribbon</module>
         <module>playground-scn-feign</module>
         <module>playground-scn-zuul</module>
-        <module>playground-scn-hystrix</module>
+        <module>playground-scn-hystrix-dashboard</module>
         <module>playground-scn-turbine</module>
     </modules>
     <properties>

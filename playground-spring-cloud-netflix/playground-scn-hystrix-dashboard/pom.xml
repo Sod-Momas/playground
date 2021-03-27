@@ -7,7 +7,7 @@
         <groupId>cc.momas</groupId>
         <version>1.0</version>
     </parent>
-    <artifactId>playground-scn-hystrix</artifactId>
+    <artifactId>playground-scn-hystrix-dashboard</artifactId>
     <version>1.0</version>
     <name>playground-scn-hystrix</name>
 
@@ -78,7 +78,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>cc.momas.hystrix.PlaygroundScnHystrixApplication</mainClass>
+                    <mainClass>cc.momas.hystrixdashboard.PlaygroundScnHystrixDashboardApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
