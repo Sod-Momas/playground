@@ -2,6 +2,11 @@
 
 Hystrix 使用示例，重点在web控制台
 
+# 启动成功画面
+
+![进入仪表盘](docs/dashboard-entry.jpg)
+![监控中的画面](docs/hystrix-dashboard.jpg)
+
 # 参考资料 
 
 - [史上最简单的SpringCloud教程 | 第十二篇: 断路器监控(Hystrix Dashboard)(Finchley版本)](https://blog.csdn.net/forezp/article/details/81041113)
