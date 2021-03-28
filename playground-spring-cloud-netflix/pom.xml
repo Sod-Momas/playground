@@ -20,6 +20,7 @@
         <module>playground-scn-zuul</module>
         <module>playground-scn-hystrix-dashboard</module>
         <module>playground-scn-turbine</module>
+        <module>playground-scn-eureka-server-ha</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -4,16 +4,17 @@ Spring Cloud Netflix 套件
 
 ## 端口配置
 
-服务                          | 端口
------------------------------|------
-playground-scn-eureka-server | 2000
-playground-scn-eureka-teriri | 2001
-playground-scn-eureka-kiana  | 2002
-playground-scn-ribbon        | 2003
-playground-scn-feign         | 2004
-playground-scn-zuul          | 2005
-playground-scn-hystrix       | 2006
-playground-scn-turbine       | 2007
+服务                                   | 端口
+------------------------------------- |------
+playground-scn-eureka-server          | 2000
+playground-scn-eureka-teriri          | 2001
+playground-scn-eureka-kiana           | 2002
+playground-scn-ribbon                 | 2003
+playground-scn-feign                  | 2004
+playground-scn-zuul                   | 2005
+playground-scn-hystrix                | 2006
+playground-scn-turbine                | 2007
+playground-scn-eureka-server-ha       | 2008,2009,2010
 
 ## 测试url
 
