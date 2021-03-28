@@ -8,9 +8,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>playground-spring-boot</artifactId>
-    <version>1.0</version>
-    <name>playground-spring-boot</name>
-    <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -22,6 +19,7 @@
     <modules>
         <module>playground-spring-boot-web</module>
         <module>playground-spring-boot-aop</module>
+        <module>playground-spring-boot-webflux</module>
     </modules>
 
 </project>

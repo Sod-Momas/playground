@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>playground-spring-boot</artifactId>
+        <groupId>cc.momas</groupId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cc.momas</groupId>
-    <artifactId>playground-spring-webflux</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>playground-spring-webflux</name>
-    <description>Demo project for Spring Boot</description>
-
-    <properties>
-        <java.version>11</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
-    </properties>
+    <artifactId>playground-spring-boot-webflux</artifactId>
 
     <dependencies>
         <dependency>

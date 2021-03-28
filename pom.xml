@@ -22,7 +22,6 @@
         <module>playground-apache-commons</module>
         <module>playground-apache-activemq</module>
         <module>playground-apache-freemarker</module>
-        <module>playground-spring-webflux</module>
         <module>playground-apache-velocity</module>
         <module>playground-spring-framework</module>
         <module>playground-spring-boot</module>
