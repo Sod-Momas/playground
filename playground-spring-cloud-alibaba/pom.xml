@@ -21,6 +21,7 @@
 
     <modules>
         <module>playground-sca-sakura</module>
+        <module>playground-sca-kallen</module>
     </modules>
 
 </project>
