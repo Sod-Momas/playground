@@ -2,13 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>playground</artifactId>
+		<artifactId>playground-javaee</artifactId>
 		<groupId>cc.momas</groupId>
 		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<artifactId>javamail</artifactId>
+	<artifactId>playground-javaee-mail</artifactId>
 	<packaging>war</packaging>
-	<name>Java Mail技术测试项目</name>
 
 	<dependencies>
 		<dependency>
