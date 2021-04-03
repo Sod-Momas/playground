@@ -31,6 +31,7 @@
         <module>playground-apache-struts2</module>
         <module>playground-javaee</module>
         <module>playground-spring-cloud-alibaba</module>
+        <module>playground-eclipse-jersey</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
