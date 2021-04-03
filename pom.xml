@@ -23,6 +23,7 @@
         <module>playground-apache-activemq</module>
         <module>playground-apache-freemarker</module>
         <module>playground-apache-velocity</module>
+        <module>playground-apache-shiro</module>
         <module>playground-spring-framework</module>
         <module>playground-spring-boot</module>
         <module>playground-javase</module>
