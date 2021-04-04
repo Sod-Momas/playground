@@ -1,4 +1,4 @@
-package quartz;
+package cc.moma.quartz;
 
 import org.quartz.Job;
 import org.quartz.JobBuilder;
@@ -26,7 +26,7 @@ import org.quartz.impl.StdSchedulerFactory;
  * @author sod
  *
  */
-public class Hello1 implements Job {
+public class QuartzApplication implements Job {
 	/**
 	 * 配置quartz,生成任务
 	 * @param args
@@ -34,7 +34,7 @@ public class Hello1 implements Job {
 	 */
 	public static void main(String[] args) throws SchedulerException {
 		// 指定执行的类
-		JobBuilder jb = JobBuilder.newJob(Hello1.class);
+		JobBuilder jb = JobBuilder.newJob(QuartzApplication.class);
 		// 指定标识
 		jb = jb.withIdentity("job1","group1");
 		// 创建

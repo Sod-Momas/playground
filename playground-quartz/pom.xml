@@ -6,9 +6,10 @@
 		<groupId>cc.momas</groupId>
 		<version>1.0</version>
 	</parent>
-	<artifactId>quartz</artifactId>
+	<artifactId>playground-quartz</artifactId>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>

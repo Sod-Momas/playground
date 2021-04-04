@@ -19,6 +19,7 @@
         <module>playground-dubbo</module>
         <module>playground-dlock</module>
         <module>playground-sql</module>
+        <module>playground-quartz</module>
         <module>playground-apache-commons</module>
         <module>playground-apache-activemq</module>
         <module>playground-apache-freemarker</module>
