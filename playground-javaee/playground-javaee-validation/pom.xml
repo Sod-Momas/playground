@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>playground</artifactId>
+        <artifactId>playground-javaee</artifactId>
         <groupId>cc.momas</groupId>
         <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>beanvalidate</artifactId>
+    <artifactId>playground-javaee-validation</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>1.1.0.Final</version>
+            <version>2.0.1.Final</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
@@ -23,13 +24,6 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.0.18.Final</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.glassfish/javax.el -->
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.el</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-
     </dependencies>
 
 </project>

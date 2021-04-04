@@ -19,5 +19,6 @@
     <modules>
         <module>playground-javaee-webapi</module>
         <module>playground-javaee-mail</module>
+        <module>playground-javaee-validation</module>
     </modules>
 </project>
