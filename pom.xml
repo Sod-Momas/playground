@@ -9,31 +9,31 @@
     <version>1.0</version>
 
     <modules>
-        <module>playground-spring-log4j2</module>
-        <module>playground-hexdump</module>
+        <module>playground-apache-activemq</module>
+        <module>playground-apache-commons</module>
+        <module>playground-apache-dubbo</module>
+        <module>playground-apache-freemarker</module>
+        <module>playground-apache-shiro</module>
+        <module>playground-apache-struts2</module>
+        <module>playground-apache-velocity</module>
+        <module>playground-dlock</module>
+        <module>playground-docker</module>
         <module>playground-easyexcel</module>
+        <module>playground-eclipse-jersey</module>
+        <module>playground-hexdump</module>
+        <module>playground-javase</module>
+        <module>playground-javaee</module>
         <module>playground-logging</module>
         <module>playground-netty</module>
+        <module>playground-okhttp</module>
+        <module>playground-quartz</module>
+        <module>playground-spring-boot</module>
+        <module>playground-spring-cloud-alibaba</module>
         <module>playground-spring-cloud-netflix</module>
         <module>playground-spring-cloud-pivotal</module>
-        <module>playground-dubbo</module>
-        <module>playground-dlock</module>
-        <module>playground-sql</module>
-        <module>playground-quartz</module>
-        <module>playground-apache-commons</module>
-        <module>playground-apache-activemq</module>
-        <module>playground-apache-freemarker</module>
-        <module>playground-apache-velocity</module>
-        <module>playground-apache-shiro</module>
         <module>playground-spring-framework</module>
-        <module>playground-spring-boot</module>
-        <module>playground-javase</module>
-        <module>playground-docker</module>
-        <module>playground-okhttp</module>
-        <module>playground-apache-struts2</module>
-        <module>playground-javaee</module>
-        <module>playground-spring-cloud-alibaba</module>
-        <module>playground-eclipse-jersey</module>
+        <module>playground-spring-log4j2</module>
+        <module>playground-sql</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
