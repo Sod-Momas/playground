@@ -14,7 +14,7 @@
         <module>playground-easyexcel</module>
         <module>playground-logging</module>
         <module>playground-netty</module>
-        <!-- <module>playground-spring-cloud-netflix</module>-->
+        <module>playground-spring-cloud-netflix</module>
         <module>playground-spring-cloud-pivotal</module>
         <module>playground-dubbo</module>
         <module>playground-dlock</module>
