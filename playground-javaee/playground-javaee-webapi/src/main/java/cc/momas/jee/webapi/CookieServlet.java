@@ -1,10 +1,12 @@
 package cc.momas.jee.webapi;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * 用于测试 cookie的Servlet
@@ -18,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = "/cookie")
 public class CookieServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         printCookie(req.getCookies());
         final var ps = req.getParameterNames();
         while (ps.hasMoreElements()) {
@@ -26,10 +28,10 @@ public class CookieServlet extends HttpServlet {
             final var value = req.getParameter(key);
             final var cookie = new Cookie(key, value);
             cookie.setComment("the comment");
-//            cookie.setDomain(req.getContextPath());
+            cookie.setDomain(req.getContextPath());
             cookie.setHttpOnly(false);
             cookie.setMaxAge(1000 * 60 * 60);
-//            cookie.setSecure(true);
+            cookie.setSecure(false);
             cookie.setPath("/");
             cookie.setVersion(1);
 
