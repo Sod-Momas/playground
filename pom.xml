@@ -19,7 +19,6 @@
         <module>playground-dlock</module>
         <module>playground-docker</module>
         <module>playground-easyexcel</module>
-        <module>playground-eclipse-jersey</module>
         <module>playground-hexdump</module>
         <module>playground-javase</module>
         <module>playground-javaee</module>
