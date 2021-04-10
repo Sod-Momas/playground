@@ -1,0 +1,20 @@
+ CREATE TABLE `t_blog` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `content` text,
+  `first_picture` varchar(255) DEFAULT NULL,
+  `flag` varchar(255) DEFAULT NULL,
+  `views` int(11) DEFAULT NULL,
+  `appreciation` int(11) NOT NULL DEFAULT '0',
+  `share_statement` int(11) NOT NULL DEFAULT '0',
+  `commentabled` int(11) NOT NULL DEFAULT '0',
+  `published` int(11) NOT NULL DEFAULT '0',
+  `recommend` int(11) NOT NULL DEFAULT '0',
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `type_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `description` text,
+  `tag_ids` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4

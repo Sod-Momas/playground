@@ -23,6 +23,7 @@
         <module>playground-javase</module>
         <module>playground-javaee</module>
         <module>playground-logging</module>
+        <module>playground-mybatis-plus</module>
         <module>playground-netty</module>
         <module>playground-okhttp</module>
         <module>playground-quartz</module>
