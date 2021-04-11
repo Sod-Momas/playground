@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webjars 演示页</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+<p>
+    webjars test , 请打开控制台查看资源是否加载正常
+</p>
+<script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+<!-- 使用webjars 加载 maven g:a:v= org.webjars:bootstrap:3.3.7 -->
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    if(jQuery){
+       document.write("jQuery ok")
+    }else{
+        document.write("jQuery error");
+    }
+</script>
+</body>
+</html>
