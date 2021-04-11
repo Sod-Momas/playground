@@ -13,6 +13,7 @@
         <module>playground-apache-commons</module>
         <module>playground-apache-dubbo</module>
         <module>playground-apache-freemarker</module>
+        <module>playground-apache-hc</module>
         <module>playground-apache-shiro</module>
         <module>playground-apache-struts2</module>
         <module>playground-apache-velocity</module>
@@ -44,4 +45,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <junit.version>4.13.1</junit.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
