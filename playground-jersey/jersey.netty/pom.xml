@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cc.momas.test</groupId>
+		<artifactId>jersey.parent</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>jersey.netty</artifactId>
+	<properties>
+		<jersey.version>2.27</jersey.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- jersey与spring的桥 -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.ext/jersey-spring4 -->
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-spring4</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<!-- 用于jersey的Netty容器 -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-netty-http -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-netty-http</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<!-- 用于序列化的依赖 -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<!-- netty 需要Servlet API -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+
+		<!-- 日志 - 统一使用slf4j做门面,logback做实现来输出日志 -->
+		<!-- 关于日志框架区别 参考这个 https://www.cnblogs.com/Leo_wl/p/3417215.html -->
+		<!-- 关于日志替换到slf4j 参考这个 http://www.cnblogs.com/FlameRen/archive/2013/04/15/3021753.html -->
+		<!-- logback 实现 slf4j -->
+		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<!-- Apache Commons Logging 转 slf4j -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/jcl-over-slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<!-- Apache Log4j 转 slf4j -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/log4j-over-slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.25</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- java.util.logging 转 slf4j -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/jul-to-slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>1.7.25</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- 这个插件用来打包可运行的jar -->
+				<!-- 参考自 https://blog.csdn.net/u013177446/article/details/53944424 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<!-- 使用 package 生命周期参数调用 shade -->
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<!-- <minimizeJar>true</minimizeJar> -->
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>jersey.netty.AppMain</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -36,6 +36,7 @@
         <module>playground-spring-log4j2</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
+        <module>playground-jersey</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

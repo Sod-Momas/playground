@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>jersey.json</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>JerseyServletContainer</servlet-name>
+		<!-- jersey 的核心Servlet -->
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<!-- 指定资源类在哪个包下的参数 -->
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<!-- 指定了 jersey.resouces 是资源类的包名 -->
+			<param-value>jersey.json</param-value>
+		</init-param>
+		<!-- 在启动服务器的时候,这个 servlet 要第 1 个启动 -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>JerseyServletContainer</servlet-name>
+		<!-- 指定拦截的url格式 -->
+		<url-pattern>/webapi/*</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
