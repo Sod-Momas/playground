@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>cc.momas.test</groupId>
-		<artifactId>jersey.parent</artifactId>
+		<groupId>cc.momas</groupId>
+		<artifactId>playground-jersey</artifactId>
 		<version>1.0</version>
 	</parent>
 	<artifactId>jersey.spring</artifactId>
