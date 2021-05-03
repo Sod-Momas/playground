@@ -1,3 +1,0 @@
-[submodule "spring-cloud-config"]
-	path = spring-cloud-config
-	url = https://github.com/Sod-Momas/spring-cloud-config
