@@ -14,7 +14,7 @@ spring:
           uri: lb://playground-scn-eureka-client
           predicates:
             - Path=/playground-scn-eureka-client/**
-            - After=2020-01-01T00:00:00.000-07:00[Asia/Shanghai]
+            - After=2020-01-01T00:00:00.000-07:00[Asia/Shanghai]  # java.time.ZonedDateTime.now().toString()
           filters:
             - StripPrefix=1
             - name: RequestRateLimiter
