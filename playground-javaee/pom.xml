@@ -15,6 +15,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <javaee.version>8.0.1</javaee.version>
     </properties>
     <modules>
         <module>playground-javaee-webapi</module>
@@ -22,4 +23,20 @@
         <module>playground-javaee-validation</module>
         <module>playground-javaee-servlet</module>
     </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/javax/javaee-web-api -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>${javaee.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
