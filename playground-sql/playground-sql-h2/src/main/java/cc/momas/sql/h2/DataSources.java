@@ -41,7 +41,7 @@ public abstract class DataSources {
     public static int write(String sql, String... args) {
         System.out.println(sql);
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
-             PreparedStatement ps = connection.prepareStatement(sql, args)) {
+             PreparedStatement ps = connection.prepareStatement(sql)) {
             if (args != null && 0 < args.length) {
                 for (int i = 0; i < args.length; i++) {
                     ps.setObject(i + 1, args[i]);
@@ -53,11 +53,11 @@ public abstract class DataSources {
         }
     }
 
-    public static <T> T read(Function<ResultSet, T> consumer, String sql, String... args) {
+    public static <T> T read(Function<ResultSet, T> consumer, String sql) {
         System.out.println(sql);
         Objects.requireNonNull(consumer);
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
-             PreparedStatement ps = connection.prepareStatement(sql, args);
+             PreparedStatement ps = connection.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
             return consumer.apply(rs);
         } catch (SQLException ex) {
