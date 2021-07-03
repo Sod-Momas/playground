@@ -15,5 +15,6 @@
         <module>playground-sql-mysql</module>
         <module>playground-sql-mssql</module>
         <module>playground-sql-h2</module>
+        <module>playground-sql-oracle</module>
     </modules>
 </project>
