@@ -1,4 +1,4 @@
-package cc.momas.r2dbc.h2;
+package cc.momas.sql.h2;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
