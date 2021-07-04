@@ -1,4 +1,4 @@
-package cc.momas;
+package cc.momas.easyexcel;
 
 import java.math.BigDecimal;
 import java.util.*;

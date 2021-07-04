@@ -1,4 +1,4 @@
-package cc.momas;
+package cc.momas.easyexcel;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 
