@@ -10,43 +10,100 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>playground-apache-shiro</artifactId>
-
-    <build>
-        <plugins>
-            <!-- This plugin is only to test run our little application.  It is not
-                 needed in most Shiro-enabled applications: -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>shiro.Tutorial</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <version>1.0</version>
+    <packaging>war</packaging>
+    <properties>
+        <shiro.version>[1.7.1,)</shiro.version>
+    </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-web -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-            <version>[1.6.0,)</version>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
         </dependency>
+
         <!-- Shiro uses SLF4J for logging.  We'll use the 'simple' binding
              in this example app.  See http://www.slf4j.org for more info. -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>1.7.30</version>
         </dependency>
-    </dependencies>
 
+<!-- web api -->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-spec -->
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-spec</artifactId>
+            <version>1.2.5</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-impl -->
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-impl</artifactId>
+            <version>1.2.5</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+
+
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- This plugin is only to test run our little application.  It is not
+                 needed in most Shiro-enabled applications: -->
+            <!--
+            <plugin>
+                 <groupId>org.codehaus.mojo</groupId>
+                 <artifactId>exec-maven-plugin</artifactId>
+                 <version>1.1</version>
+                 <executions>
+                     <execution>
+                         <goals>
+                             <goal>java</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+                 <configuration>
+                     <mainClass>cc.momas.apache.shiro.Tutorial</mainClass>
+                 </configuration>
+             </plugin>
+             -->
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat8-maven-plugin -->
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- 运行的路径, 浏览器直接访问 localhost/ 就可以了 -->
+                    <path>/</path>
+                    <!-- 运行的端口, 浏览器默认的80端口 -->
+                    <port>80</port>
+                    <!-- 编码 -->
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

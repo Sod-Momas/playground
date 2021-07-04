@@ -10,11 +10,7 @@ Shiro默认支持ini配置文件,在使用传统客户端时可以直接使用in
 
 如果在web应用中使用shiro会有不同的解决方案,但使用的API是一致的
 
-## 启动方式
-
-1. 请在IDE里直接启动 `Tutorial.java`类
-2. 请使用maven命令`mvn clean compile exec:java -X`来启动该项目
-
 ## 参考链接 
 - [Shiro](https://shiro.apache.org/)
 - [Apache Shiro教程](https://shiro.apache.org/tutorial.html)
+- [Apache Shiro Web Support](https://shiro.apache.org/web.html) 整合web应用

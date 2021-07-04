@@ -1,0 +1,52 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>playground-apache-shiro</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <listener>
+        <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>ShiroFilter</filter-name>
+        <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+        <!-- 用于自定义 shiro.ini 配置文件位置
+        <init-param>
+            <param-name>configPath</param-name>
+            <param-value>/WEB-INF/anotherFile.ini</param-value>
+        </init-param>
+        -->
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ShiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+    </filter-mapping>
+
+    <!-- 用于自定义shiro 环境配置类 -->
+    <context-param>
+        <param-name>shiroEnvironmentClass</param-name>
+        <param-value>org.apache.shiro.web.env.IniWebEnvironment</param-value>
+    </context-param>
+
+    <!--   用于自定义 shiro.ini 配置位置
+       <context-param>
+           <param-name>shiroConfigLocations</param-name>
+           <param-value>file:/home/foobar/myapp/shiro.ini</param-value>
+           <param-value>classpath:com/foo/bar/shiro.ini</param-value>
+           <param-value>url:http://confighost.mycompany.com/myapp/shiro.ini</param-value>
+       </context-param>
+   -->
+
+    <session-config>
+        <!-- web.xml expects the session timeout in minutes: -->
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>
