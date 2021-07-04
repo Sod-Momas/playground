@@ -24,7 +24,7 @@
         <module>playground-javase</module>
         <module>playground-jersey</module>
         <module>playground-javaee</module>
-        <module>playground-logging</module>
+        <module>playground-log</module>
         <module>playground-mybatis-plus</module>
         <module>playground-netty</module>
         <module>playground-okhttp</module>
