@@ -1,4 +1,4 @@
-package cc.momas.demo.beanvalidate;
+package cc.momas.jee.beanvalidate;
 
 import org.hibernate.validator.HibernateValidator;
 

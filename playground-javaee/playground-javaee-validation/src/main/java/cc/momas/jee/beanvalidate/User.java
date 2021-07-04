@@ -1,4 +1,4 @@
-package cc.momas.demo.beanvalidate;
+package cc.momas.jee.beanvalidate;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
