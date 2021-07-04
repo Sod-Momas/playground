@@ -4,6 +4,8 @@
 
 - [如何在docker中安装Oracle数据库](./docs/install-oracle-in-docker.md)
 - [管理Oracle数据库](./docs/manage-oracle.md)
+- [Oracle 数据库连接工具](https://blog.csdn.net/zhangyu19881125/article/details/44401645)
+- [SQL Developer 20.4.1 Downloads ](https://www.oracle.com/tools/downloads/sqldev-downloads.html) Oracle 研发的 Oracle 数据库客户端
 
 # 参考资料
 
