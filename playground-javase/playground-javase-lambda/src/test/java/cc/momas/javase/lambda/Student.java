@@ -1,3 +1,5 @@
+package cc.momas.javase.lambda;
+
 /**
  * @author Sod-Momas
  * @since 2021-02-21

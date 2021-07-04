@@ -18,7 +18,7 @@
     </properties>
     <modules>
         <module>playground-string</module>
-        <module>playground-lambda</module>
+        <module>playground-javase-lambda</module>
         <module>playground-proxy</module>
         <module>playground-spi</module>
         <module>playground-javase-collections</module>

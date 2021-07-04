@@ -1,3 +1,5 @@
+package cc.momas.javase.lambda;
+
 import org.junit.Test;
 
 import java.util.List;

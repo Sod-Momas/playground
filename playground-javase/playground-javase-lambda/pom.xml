@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>playground-lambda</artifactId>
+    <artifactId>playground-javase-lambda</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
