@@ -16,6 +16,7 @@
         <module>playground-apache-hc</module>
         <module>playground-apache-shiro</module>
         <module>playground-apache-struts2</module>
+        <module>playground-apache-tomcat</module>
         <module>playground-apache-velocity</module>
         <module>playground-dlock</module>
         <module>playground-docker</module>
