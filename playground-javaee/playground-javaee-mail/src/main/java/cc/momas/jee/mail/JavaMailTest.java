@@ -1,4 +1,4 @@
-package cc.momas.demo;
+package cc.momas.jee.mail;
 
 import java.util.Properties;
 
