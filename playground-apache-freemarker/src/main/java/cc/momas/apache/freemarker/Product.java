@@ -1,4 +1,4 @@
-package cc.momas.apache;
+package cc.momas.apache.freemarker;
 
 /**
  * @author Sod-Momas

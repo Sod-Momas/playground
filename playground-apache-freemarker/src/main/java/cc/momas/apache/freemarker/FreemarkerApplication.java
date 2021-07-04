@@ -1,4 +1,4 @@
-package cc.momas.apache;
+package cc.momas.apache.freemarker;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
