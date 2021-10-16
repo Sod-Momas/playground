@@ -19,6 +19,7 @@
     <modules>
         <module>playground-spring-boot-web</module>
         <module>playground-spring-boot-aop</module>
+        <module>playground-spring-boot-autoconfig</module>
         <module>playground-spring-boot-webflux</module>
         <module>playground-spring-boot-websocket</module>
         <module>playground-spring-boot-multidatasource</module>
