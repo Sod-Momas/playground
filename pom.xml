@@ -24,6 +24,7 @@
         <module>playground-hexdump</module>
         <module>playground-javase</module>
         <module>playground-jersey</module>
+        <module>playground-jol</module>
         <module>playground-javaee</module>
         <module>playground-log</module>
         <module>playground-mybatis-plus</module>
