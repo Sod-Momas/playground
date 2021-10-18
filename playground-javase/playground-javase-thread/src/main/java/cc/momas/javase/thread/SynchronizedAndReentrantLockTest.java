@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author Sod-Momas
  * @since 2021/10/17
  */
-public class CountDownLatchTest {
+public class SynchronizedAndReentrantLockTest {
     // 共享资源
     private static int test1_res = 0;
     private static int test2_res = 0;
