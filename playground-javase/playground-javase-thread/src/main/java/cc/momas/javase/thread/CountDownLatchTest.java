@@ -13,6 +13,56 @@ public class CountDownLatchTest {
     public static void main(String[] args) {
         // 等待所有线程完成后再执行某个操作
         momWaitAllBaby();
+        // 所有选手同时起跑
+        runAtSameTime();
+    }
+
+    private static void runAtSameTime() {
+        /*
+         * 起跑选手
+         */
+        class Runner implements Runnable {
+            private final CountDownLatch countDownLatch;
+            private final String runnerName;
+
+            Runner(CountDownLatch countDownLatch, String runnerName) {
+                this.countDownLatch = countDownLatch;
+                this.runnerName = runnerName;
+            }
+
+            @Override
+            public void run() {
+                try {
+                    // 选手已经准备好了
+                    System.out.println(runnerName + " already to run");
+                    // 进入等待
+                    countDownLatch.await();
+                    System.out.println(runnerName + " run at " + System.currentTimeMillis());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        // 选手数量
+        int SIZE = 10;
+        // 裁判
+        final CountDownLatch judgment = new CountDownLatch(1);
+
+        for (int i = 0; i < SIZE; i++) {
+            // 准备起跑
+            new Thread(new Runner(judgment, "Runner" + i)).start();
+        }
+
+        try {
+            // 等待所有选手准备好，这个时间是不确定的
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("开跑！");
+        // 开枪示意起跑
+        judgment.countDown();
     }
 
     private static void momWaitAllBaby() {
