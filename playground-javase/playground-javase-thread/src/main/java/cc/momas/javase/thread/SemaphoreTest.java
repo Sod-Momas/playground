@@ -85,12 +85,12 @@ public class SemaphoreTest {
         @Override
         public void run() {
             try {
-                // 获取公共资源
-                semaphore.acquire();
+                // 获取公共资源，取一个票据
+                semaphore.acquire(1);
                 System.out.println(getName() + " thread acquire at time:" + System.currentTimeMillis());
                 TimeUnit.SECONDS.sleep(2);
-                // 释放公共资源
-                semaphore.release();
+                // 释放公共资源，返还一个票据
+                semaphore.release(1);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
