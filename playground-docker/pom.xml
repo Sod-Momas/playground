@@ -18,5 +18,6 @@
     </properties>
     <modules>
         <module>playground-docker-spotify</module>
+        <module>playground-docker-dockerfile</module>
     </modules>
 </project>

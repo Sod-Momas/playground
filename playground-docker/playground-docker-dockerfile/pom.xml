@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cc.momas</groupId>
+    <version>1.0</version>
+    <artifactId>playground-docker-dockerfile</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+    <repositories>
+        <!--        https://developer.aliyun.com/mvn/guide -->
+        <!--        <repository>-->
+        <!--            &lt;!&ndash;  配置国内仓库加速下载 &ndash;&gt;-->
+        <!--            <id>aliyunmaven</id>-->
+        <!--            <name>阿里云公共仓库</name>-->
+        <!--            <url>https://maven.aliyun.com/repository/public</url>-->
+        <!--            <releases>-->
+        <!--                <enabled>true</enabled>-->
+        <!--            </releases>-->
+        <!--        </repository>-->
+        <repository>
+            <!--            https://mirrors.cloud.tencent.com/help/maven.html -->
+            <!--  配置国内仓库加速下载 -->
+            <id>nexus-tencentyun</id>
+            <name>Nexus tencentyun</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+</project>
