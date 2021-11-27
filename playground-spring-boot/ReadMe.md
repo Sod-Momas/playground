@@ -108,3 +108,102 @@ test.yml
 test:
   testName: test name from yml
 ```
+
+## Spring Boot 引入配置文件的几个方式
+
+主类
+
+```java
+@EnableDay03
+@SpringBootApplication
+public class Main {
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+}
+```
+
+配置类
+
+```java
+public class ApplicationEntry {
+    static {
+        System.out.println("run");
+    }
+}
+```
+```java
+import java.lang.annotation.*;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@Documented
+//@Import(Day20191203AutoConfiguration.class)
+public @interface EnableDay03 {
+}
+
+```
+```java
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(prefix = "learn.spring")
+public class Day20191203Properties {
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+}
+```
+```java
+
+import cc.momas.demo.ApplicationEntry;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ConditionalOnClass({ApplicationEntry.class})
+@EnableConfigurationProperties({Day20191203Properties.class})
+public class Day20191203AutoConfiguration {
+    static {
+        System.out.println("day 03 auto config");
+    }
+}
+
+```
+
+配置文件
+
+META-INF/spring.factories
+```properties
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cc.momas.autoconfig.Day20191203AutoConfiguration
+```
+
+> 运行 cc.momas.third_party_project.Main ,控制台打印 `day 03 auto config` 表示自动配置成功
+
+1. 责任链设计模式实现
+2. 抽象配置成一个接口, 让需要配置参数的类依赖接口而非实现 (里氏替换原则)
+3. spring 的 spring.factories 的 SPI 机制
+4. 写个注解作为标记,可以命名为 EnableXXX, 然后在这个注解里加个组合注解, @Import 进来 AutoConfiguration 类
+5. spring boot 把 dispatcherServlet 放到 spring 容器, spring mvc 是把 spring 容器放到 dispatcherServlet 里
+6. 如果存在 org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport 实现类, 则 spring mvc 自动配置会失效
+7. spring boot 会在当前容器里找到所有 HttpMessageConverter 放进 spring mvc 消息转换器列表里. 所以spring boot 加 HttpMessageConverter 的时候加个 @Bean 就可以, 而不用去自己写 spring mvc 配置类
+8. spring boot 会在当前容器里找到所有 ContentNegotiatingViewResolver 自动注入到 spring mvc 消息解析器列表里
+   9.通过实现 org.springframework.web.servlet.ViewResolver 接口来实现一个 ViewResolver , spring boot会自动添加到 spring mvc 里
+
+主要类:
+
+- DispatcherServlet
+- WebAutoConfiguration
+- ContentNegotiatingViewResolver
+- Converter
+- HttpMessageConverters
+- ApplicationContextAware
+
