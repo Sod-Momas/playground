@@ -1,0 +1,39 @@
+version: "2"
+services:
+  nacos:
+    image: nacos/nacos-server:2.0.3
+    container_name: nacos-standalone-mysql
+    env_file:
+      - ./nacos.env
+#    volumes:
+#      - ./standalone-logs/:/home/nacos/logs
+#      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9555:9555"
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    container_name: mysql
+    image: nacos/nacos-mysql:8.0.16
+    env_file:
+      - ./mysql.env
+#    volumes:
+#      - /mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  redis:
+    container_name: redis
+    image: redis:6.2.6
+    command: redis-server /etc/redis/redis.conf
+    volumes:
+      - $PWD/data:/data
+      - ./redis.conf:/etc/redis/redis.conf
+    ports:
+      - 6379:6379
+    restart: always
+
+
