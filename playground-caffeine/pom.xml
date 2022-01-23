@@ -10,7 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>playground-caffeine</artifactId>
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>playground-caffeine-springboot</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
