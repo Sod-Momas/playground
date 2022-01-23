@@ -40,6 +40,7 @@
         <module>playground-spring-data</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
+        <module>playground-caffeine</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
