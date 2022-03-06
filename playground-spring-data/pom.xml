@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>playground-spring-data-redis-reactive</module>
+        <module>playground-spring-data-elasticsearch</module>
     </modules>
 
     <artifactId>playground-spring-data</artifactId>
