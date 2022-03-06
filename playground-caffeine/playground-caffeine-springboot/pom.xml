@@ -72,7 +72,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>cc.momas.scp.gateway.PlaygroundScpGatewayApplication</mainClass>
+                    <mainClass>cc.momas.caffeine.sb.CaffeineSpringBootApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
