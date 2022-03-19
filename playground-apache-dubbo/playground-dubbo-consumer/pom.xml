@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cc.momas.dubbo</groupId>
     <artifactId>playground-dubbo-consumer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>playground-dubbo-consumer</name>
     <description>Demo project for Spring Boot Dubbo</description>
 
