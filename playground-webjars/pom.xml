@@ -2,15 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>playground</artifactId>
-        <groupId>cc.momas</groupId>
-        <version>1.0</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>cc.momas</groupId>
     <artifactId>playground-webjars</artifactId>
     <packaging>war</packaging>
+    <version>1.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -39,6 +35,13 @@
                     <!-- 编码 -->
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <!-- 用于打包war包的插件 -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
         </plugins>
     </build>
