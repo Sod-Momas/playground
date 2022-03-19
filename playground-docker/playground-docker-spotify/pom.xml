@@ -46,14 +46,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
             </plugin>
             <!--docker plugin::start-->
             <!--see https://github.com/spotify/docker-maven-plugin-->
@@ -78,14 +78,14 @@
                     </resources>
                 </configuration>
                 <executions>
-                    <execution>
-                        <!--绑定到 package 生命周期-->
-                        <phase>package</phase>
-                        <goals>
-                            <!--package 之后执行 docker:build-->
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
+<!--                    <execution>-->
+<!--                        绑定到 package 生命周期-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            package 之后执行 docker:build-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
                 </executions>
             </plugin>
             <!--docker plugin::end-->
