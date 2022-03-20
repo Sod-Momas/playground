@@ -18,6 +18,8 @@
         <module>playground-apache-struts2</module>
         <module>playground-apache-tomcat</module>
         <module>playground-apache-velocity</module>
+        <module>playground-caffeine</module>
+        <module>playground-disruptor</module>
         <module>playground-dlock</module>
         <module>playground-docker</module>
         <module>playground-easyexcel</module>
@@ -40,7 +42,6 @@
         <module>playground-spring-data</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
-        <module>playground-caffeine</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
