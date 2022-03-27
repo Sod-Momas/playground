@@ -13,7 +13,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 public class RxOrder {
     @Id
     private Long id;
-    @Field(type = FieldType.Text, analyzer = "ik_max_word")
+    @Field(type = FieldType.Text/*, analyzer = "ik_max_word"*/)
     private String rxTitle;
     @Field(type = FieldType.Keyword)
     private String rxDesc;
