@@ -1,4 +1,4 @@
-package cc.momas.sd.es;
+package cc.momas.sd.es.sample1;
 
 import cc.momas.sd.es.sample1.KibanaSampleDataEcommerce;
 import cc.momas.sd.es.sample1.KibanaSampleDataEcommerceRepository;

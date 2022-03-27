@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "172eab20-15b9-45f6-9203-0a9355383fc8",
+		"name": "rx-order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rxorder-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rx-order/get?id=144",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rx-order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "144"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rxorder-add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123,\r\n    \"rxTitle\": \"rxTitlerxTitle 这是做的题标题而已，是的\",\r\n    \"rxDesc\": \"处方描述，如果\",\r\n    \"rxPrice\": 12.33555,\r\n    \"rxRemark\": \"备注内容\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rx-order/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rx-order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rxorder-create-index",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123,\r\n    \"rxTitle\": \"rxTitlerxTitle 这是做的题标题而已，是的\",\r\n    \"rxDesc\": \"处方描述，如果\",\r\n    \"rxPrice\": 12.33555,\r\n    \"rxRemark\": \"备注内容\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rx-order/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rx-order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rxorder-create-mapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123,\r\n    \"rxTitle\": \"rxTitlerxTitle 这是做的题标题而已，是的\",\r\n    \"rxDesc\": \"处方描述，如果\",\r\n    \"rxPrice\": 12.33555,\r\n    \"rxRemark\": \"备注内容\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rx-order/create-mapping",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rx-order",
+						"create-mapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rxorder-delete-index",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123,\r\n    \"rxTitle\": \"rxTitlerxTitle 这是做的题标题而已，是的\",\r\n    \"rxDesc\": \"处方描述，如果\",\r\n    \"rxPrice\": 12.33555,\r\n    \"rxRemark\": \"备注内容\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rx-order/delete-index",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rx-order",
+						"delete-index"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
