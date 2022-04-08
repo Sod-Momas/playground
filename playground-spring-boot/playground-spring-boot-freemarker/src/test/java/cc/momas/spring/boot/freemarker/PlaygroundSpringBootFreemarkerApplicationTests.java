@@ -1,4 +1,4 @@
-package cc.momas.spring.boot.web;
+package cc.momas.spring.boot.freemarker;
 
 import freemarker.template.TemplateException;
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ public class PlaygroundSpringBootFreemarkerApplicationTests {
     @Test
     public void parseTest() throws TemplateException, IOException {
         Map<String, String> param = Collections.singletonMap("name", "world");
-        final String result = springFreeMarkerService.parse("helloworld.flth", param);
+        final String result = springFreeMarkerService.parse("helloworld.ftlh", param);
         log.info("result={}", result);
     }
 }

@@ -2,13 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>playground-spring-boot</artifactId>
-        <groupId>cc.momas</groupId>
-        <version>1.0</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>cc.momas</groupId>
+    <version>1.0</version>
     <artifactId>playground-spring-boot-freemarker</artifactId>
 
     <properties>
@@ -26,10 +23,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -73,7 +76,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>cc.momas.spring.boot.web.PlaygroundSpringBootFreemarkerApplication</mainClass>
+                    <mainClass>cc.momas.spring.boot.freemarker.PlaygroundSpringBootFreemarkerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

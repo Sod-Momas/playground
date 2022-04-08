@@ -1,4 +1,4 @@
-package cc.momas.spring.boot.web;
+package cc.momas.spring.boot.freemarker;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -15,7 +15,7 @@ import java.util.Objects;
  * @author Sod-Momas
  * @since 2022/4/8
  */
-//@Component
+@Component
 public class SpringFreeMarkerService {
     @Autowired
     private Configuration config;
