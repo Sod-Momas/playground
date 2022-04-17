@@ -38,8 +38,9 @@
         <module>playground-spring-cloud-alibaba</module>
         <module>playground-spring-cloud-netflix</module>
         <module>playground-spring-cloud-pivotal</module>
-        <module>playground-spring-framework</module>
         <module>playground-spring-data</module>
+        <module>playground-spring-framework</module>
+        <module>playground-spring-shell</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
     </modules>
