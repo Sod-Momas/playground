@@ -1,4 +1,4 @@
-package cc.momas.caffeine.sb;
+package cc.momas.sb.caffeine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2022/1/23
  */
 @SpringBootApplication
-public class CaffeineSpringBootApplication {
+public class SpringBootCaffeineApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CaffeineSpringBootApplication.class);
+        SpringApplication.run(SpringBootCaffeineApplication.class);
     }
 }

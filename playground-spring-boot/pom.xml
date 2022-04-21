@@ -20,6 +20,7 @@
         <module>playground-spring-boot-web</module>
         <module>playground-spring-boot-aop</module>
         <module>playground-spring-boot-autoconfig</module>
+        <module>playground-spring-boot-caffeine</module>
         <module>playground-spring-boot-freemarker</module>
         <module>playground-spring-boot-groovy</module>
         <module>playground-spring-boot-webflux</module>

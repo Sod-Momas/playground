@@ -1,4 +1,4 @@
-package cc.momas.caffeine.sb;
+package cc.momas.sb.caffeine;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @since 2022/1/23
  */
 @SpringBootTest
-public class CaffeineSpringBootApplicationTests {
+public class SpringBootCaffeineApplicationTests {
 
     @Test
     public void loadContext(){
