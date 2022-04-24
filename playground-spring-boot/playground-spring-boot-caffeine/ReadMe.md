@@ -1,4 +1,4 @@
-# playground-caffeine
+# playground-spring-boot-caffeine
 
 高性能JVM缓存工具
 
