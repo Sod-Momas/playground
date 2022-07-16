@@ -19,6 +19,7 @@
     <modules>
         <module>playground-spring-framework-spel</module>
         <module>playground-spring-framework-cache</module>
+        <module>playground-spring-framework-event</module>
     </modules>
 
 </project>
