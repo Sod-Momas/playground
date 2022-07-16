@@ -12,3 +12,6 @@ Spring 事件机制演示, 核心类:
 - `@Async` 注解使其具有了异步执行的能力, 其他逻辑没有区别
 - 事件实体可以直接使用任意实体类, 也可以使用规范里的 `org.springframework.context.ApplicationEvent` 类, 没有区别,接收的时候能做判断就行
 
+## reference
+
+- [Spring Boot Event 观察者模式，轻松实现业务解耦！](https://mp.weixin.qq.com/s/tddG8HZALF3xB-xk3oqGMA)
