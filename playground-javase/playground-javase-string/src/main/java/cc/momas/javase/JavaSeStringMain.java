@@ -1,11 +1,11 @@
-package cc.momas;
+package cc.momas.javase;
 
 
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 
-public class Main {
+public class JavaSeStringMain {
     public static void main(String[] args) {
 //        test1();
 //        test2();
