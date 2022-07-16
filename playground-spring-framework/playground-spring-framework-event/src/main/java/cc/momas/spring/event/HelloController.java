@@ -22,4 +22,10 @@ public class HelloController {
         applicationContext.publishEvent(event);
         return Mono.just("published");
     }
+    @RequestMapping("/publish-event-async")
+    public Mono<String> publishEventAsync() {
+        final MyEventAsync event = new MyEventAsync("source async", "a json async");
+        applicationContext.publishEvent(event);
+        return Mono.just("published async");
+    }
 }
