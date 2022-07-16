@@ -18,13 +18,14 @@ public class HelloController {
 
     @RequestMapping("/publish-event")
     public Mono<String> publishEvent() {
-        final MyEvent event = new MyEvent("source", "a json");
+        final MyEvent event = new MyEvent(this, "a json");
         applicationContext.publishEvent(event);
         return Mono.just("published");
     }
+
     @RequestMapping("/publish-event-async")
     public Mono<String> publishEventAsync() {
-        final MyEventAsync event = new MyEventAsync("source async", "a json async");
+        final MyEventAsync event = new MyEventAsync(this, "a json async");
         applicationContext.publishEvent(event);
         return Mono.just("published async");
     }
