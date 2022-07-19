@@ -20,6 +20,7 @@
         <module>playground-spring-framework-spel</module>
         <module>playground-spring-framework-cache</module>
         <module>playground-spring-framework-event</module>
+        <module>playground-spring-framework-webmvc</module>
     </modules>
 
 </project>
