@@ -18,3 +18,4 @@ mvn tomcat7:run
 ## Reference
 
 - [启动spring容器几种方法](https://blog.csdn.net/fz13768884254/article/details/85229640)
+- [springMVC启用注解](https://blog.csdn.net/gluawwa/article/details/52972700)
