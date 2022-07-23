@@ -3,25 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>playground</artifactId>
+        <artifactId>playground-spring-framework</artifactId>
         <groupId>cc.momas</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>playground-spring-framework</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>playground-spring-framework-core</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-    <modules>
-        <module>playground-spring-framework-spel</module>
-        <module>playground-spring-framework-cache</module>
-        <module>playground-spring-framework-core</module>
-        <module>playground-spring-framework-event</module>
-        <module>playground-spring-framework-webmvc</module>
-    </modules>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.12.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>
