@@ -23,5 +23,11 @@
             <artifactId>spring-context</artifactId>
             <version>5.2.12.RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>3.0.7</version>
+        </dependency>
     </dependencies>
 </project>

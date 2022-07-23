@@ -14,8 +14,8 @@ public class SpringCoreApplication {
     private final static Logger logger = Logger.getGlobal();
 
     public static void main(String[] args) {
-        xmlStart();
-//        groovyStart();
+//        xmlStart();
+        groovyStart();
     }
 
     private static void groovyStart() {
