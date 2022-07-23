@@ -46,8 +46,8 @@
         </property>
     </bean>
 
-    <!--    集合演示 -->
-    <bean id="complexObject" class="cc.momas.spring.core.ComplexObject">
+    <!--    集合演示 abstract可以使这个bean可以继承 -->
+    <bean id="complexObject" abstract="true" class="cc.momas.spring.core.ComplexObject">
         <!-- results in a setAdminEmails(java.util.Properties) call -->
         <property name="adminEmails">
             <props>
@@ -60,7 +60,7 @@
         <property name="someList">
             <list>
                 <value>a list element followed by a reference</value>
-                <ref bean="toy" />
+                <ref bean="toy"/>
             </list>
         </property>
         <!-- results in a setSomeMap(java.util.Map) call -->
@@ -75,6 +75,23 @@
             <set>
                 <value>just some string</value>
                 <ref bean="toy" />
+            </set>
+        </property>
+    </bean>
+<!--    子bean-->
+    <bean id="complexObjectChild" parent="complexObject">
+        <property name="adminEmails">
+            <!-- the merge is specified on the child collection definition -->
+            <!-- merge 可以其与父字段集合合并-->
+            <props merge="true">
+                <prop key="sales">sales@example.com</prop>
+                <prop key="support">support@example.co.uk</prop>
+            </props>
+        </property>
+        <property name="someSet">
+            <set merge="true">
+                <!-- 空元素 null-->
+                <null/>
             </set>
         </property>
     </bean>

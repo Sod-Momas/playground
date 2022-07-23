@@ -57,8 +57,10 @@ public class SpringCoreApplication {
         final PropertySourcesPlaceholderConfigurer mappings = context.getBean("mappings", PropertySourcesPlaceholderConfigurer.class);
         logger.info("PropertySourcesPlaceholderConfigurer " + mappings);
 
-        final ComplexObject contextBean = context.getBean(ComplexObject.class);
-        logger.info("ComplexObject " + contextBean);
+//        final ComplexObject contextBean = context.getBean(ComplexObject.class);
+//        logger.info("ComplexObject " + contextBean);
+        final ComplexObject complexObjectChild = context.getBean("complexObjectChild", ComplexObject.class);
+        logger.info("complexObjectChild " + complexObjectChild);
 
     }
 }
