@@ -29,6 +29,11 @@
         <constructor-arg index="2" name="toys" ref="toy"/>
     </bean>
 
+    <!-- 使用autowire让bean里的属性被自动注入(基于setter ) -->
+    <bean id="autowiredZoo" class="cc.momas.spring.core.AutowiredZoo" autowire="byType">
+        <constructor-arg name="cat" ref="cat"/>
+    </bean>
+
     <!-- more bean definitions for services go here -->
 
 </beans>

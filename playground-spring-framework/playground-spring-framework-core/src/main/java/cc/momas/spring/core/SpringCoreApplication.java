@@ -44,5 +44,11 @@ public class SpringCoreApplication {
         logger.info(cat.toString());
         cat.play();
 
+        final AutowiredZoo autowiredZoo = context.getBean("autowiredZoo", AutowiredZoo.class);
+        // 构造方法注入属于必填
+        logger.info("动物园一定有小猫：" + autowiredZoo.getCat());
+        // setter方法注入属于可选
+        logger.info("动物园里可能有其他小动物" + autowiredZoo.getAnimals());
+
     }
 }

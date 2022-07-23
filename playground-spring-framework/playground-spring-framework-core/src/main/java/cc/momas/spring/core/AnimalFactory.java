@@ -48,6 +48,11 @@ public class AnimalFactory {
         public void eat() {
             logger.info("吃鱼");
         }
+
+        @Override
+        public String toString() {
+            return "鸭鸭";
+        }
     }
 
     public static class Dog implements Animal {
@@ -59,6 +64,11 @@ public class AnimalFactory {
         @Override
         public void eat() {
             logger.info("吃肉骨头");
+        }
+
+        @Override
+        public String toString() {
+            return "狗狗";
         }
     }
 }
