@@ -34,6 +34,50 @@
         <constructor-arg name="cat" ref="cat"/>
     </bean>
 
+    <!--    使用字符串块直接赋值-->
+    <bean id="mappings"
+          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <!-- typed as a java.util.Properties -->
+        <property name="properties">
+            <value>
+                jdbc.driver.className=com.mysql.jdbc.Driver
+                jdbc.url=jdbc:mysql://localhost:3306/mydb
+            </value>
+        </property>
+    </bean>
+
+    <!--    集合演示 -->
+    <bean id="complexObject" class="cc.momas.spring.core.ComplexObject">
+        <!-- results in a setAdminEmails(java.util.Properties) call -->
+        <property name="adminEmails">
+            <props>
+                <prop key="administrator">administrator@example.org</prop>
+                <prop key="support">support@example.org</prop>
+                <prop key="development">development@example.org</prop>
+            </props>
+        </property>
+        <!-- results in a setSomeList(java.util.List) call -->
+        <property name="someList">
+            <list>
+                <value>a list element followed by a reference</value>
+                <ref bean="toy" />
+            </list>
+        </property>
+        <!-- results in a setSomeMap(java.util.Map) call -->
+        <property name="someMap">
+            <map>
+                <entry key="an entry" value="just some string"/>
+                <entry key ="a ref" value-ref="toy"/>
+            </map>
+        </property>
+        <!-- results in a setSomeSet(java.util.Set) call -->
+        <property name="someSet">
+            <set>
+                <value>just some string</value>
+                <ref bean="toy" />
+            </set>
+        </property>
+    </bean>
     <!-- more bean definitions for services go here -->
 
 </beans>

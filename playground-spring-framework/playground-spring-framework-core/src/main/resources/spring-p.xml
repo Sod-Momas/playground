@@ -8,6 +8,7 @@
     <!--
     https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/core.html#beans-value-element
     使用 <bean>里的<property>可以实现一样的效果，但<property>出错是在运行期，而p命名空间可以在编译期就发现异常
+    factory-method/init-method/destroy-method 是生命周期方法，与p命名空间无关
      -->
     <bean id="pig" class="cc.momas.spring.core.Pig"
           factory-method="getInstance"
@@ -16,5 +17,11 @@
           p:weight="12.1"
           p:height="44"
     />
+    <!--
+    <bean id="pig" class="cc.momas.spring.core.Pig">
+        <property name="weight" value="22.2"/>
+        <property name="height" value="666"/>
+    </bean>
+    -->
 
 </beans>

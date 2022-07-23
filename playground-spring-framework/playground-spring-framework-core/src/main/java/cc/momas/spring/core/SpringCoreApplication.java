@@ -3,6 +3,7 @@ package cc.momas.spring.core;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericGroovyApplicationContext;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import java.util.logging.Logger;
 
@@ -50,8 +51,14 @@ public class SpringCoreApplication {
         // setter方法注入属于可选
         logger.info("动物园里可能有其他小动物" + autowiredZoo.getAnimals());
 
-        context.getBean(Pig.class);
+        final Pig pig = context.getBean(Pig.class);
+        logger.info(pig.toString());
 
+        final PropertySourcesPlaceholderConfigurer mappings = context.getBean("mappings", PropertySourcesPlaceholderConfigurer.class);
+        logger.info("PropertySourcesPlaceholderConfigurer " + mappings);
+
+        final ComplexObject contextBean = context.getBean(ComplexObject.class);
+        logger.info("ComplexObject " + contextBean);
 
     }
 }
