@@ -14,8 +14,8 @@ public class SpringCoreApplication {
     private final static Logger logger = Logger.getGlobal();
 
     public static void main(String[] args) {
-//        xmlStart();
-        groovyStart();
+        xmlStart();
+//        groovyStart();
     }
 
     private static void groovyStart() {
@@ -27,9 +27,18 @@ public class SpringCoreApplication {
     }
 
     private static void xmlStart() {
-        final ClassPathXmlApplicationContext xmlContext = new ClassPathXmlApplicationContext("spring.xml");
-        final SpringCoreHelloService helloService = xmlContext.getBean(SpringCoreHelloService.class);
+        final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        final SpringCoreHelloService helloService = context.getBean(SpringCoreHelloService.class);
         final String result = helloService.hello("xml momas");
         logger.info("result: " + result);
+
+        // 使用静态工厂方法实例化，而不是反射调用构造方法生成。配置在xml里
+        final SingleDogService singleDogService = context.getBean("singleDogService", SingleDogService.class);
+        logger.info("SingleDogService calculate resut:" + singleDogService.calc(1, 2) + "");
+
+        // 使用实例工厂
+        context.getBean("duck", AnimalFactory.Animal.class).run();
+        context.getBean("dog", AnimalFactory.Animal.class).run();
+
     }
 }

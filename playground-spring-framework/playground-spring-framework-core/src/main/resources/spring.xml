@@ -7,12 +7,12 @@
     <!-- services -->
 
     <bean id="springCoreHelloService" class="cc.momas.spring.core.SpringCoreHelloService"/>
-
-<!--    <bean id="petStore" class="org.springframework.samples.jpetstore.services.PetStoreServiceImpl">-->
-<!--        <property name="accountDao" ref="accountDao"/>-->
-<!--        <property name="itemDao" ref="itemDao"/>-->
-        <!-- additional collaborators and configuration for this bean go here -->
-<!--    </bean>-->
+    <!--  使用静态工厂方法产生实例 https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/core.html#beans-factory-class-static-factory-method  -->
+    <bean id="singleDogService" class="cc.momas.spring.core.SingleDogService" factory-method="getInstance"/>
+    <!-- 实例工厂 https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/core.html#beans-factory-class-instance-factory-method -->
+    <bean id="animalFacktory" class="cc.momas.spring.core.AnimalFactory" factory-method="getInstance"/>
+    <bean id="dog" class="cc.momas.spring.core.AnimalFactory.Dog" factory-bean="animalFacktory" factory-method="getDog"/>
+    <bean id="duck" class="cc.momas.spring.core.AnimalFactory.Duck" factory-bean="animalFacktory" factory-method="getDuck"/>
 
     <!-- more bean definitions for services go here -->
 
