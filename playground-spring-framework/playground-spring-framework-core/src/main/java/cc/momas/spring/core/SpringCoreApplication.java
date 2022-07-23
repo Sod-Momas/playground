@@ -27,7 +27,7 @@ public class SpringCoreApplication {
     }
 
     private static void xmlStart() {
-        final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml", "spring-p.xml");
         final SpringCoreHelloService helloService = context.getBean(SpringCoreHelloService.class);
         final String result = helloService.hello("xml momas");
         logger.info("result: " + result);
@@ -49,6 +49,9 @@ public class SpringCoreApplication {
         logger.info("动物园一定有小猫：" + autowiredZoo.getCat());
         // setter方法注入属于可选
         logger.info("动物园里可能有其他小动物" + autowiredZoo.getAnimals());
+
+        context.getBean(Pig.class);
+
 
     }
 }
