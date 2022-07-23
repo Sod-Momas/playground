@@ -14,6 +14,21 @@
     <bean id="dog" class="cc.momas.spring.core.AnimalFactory.Dog" factory-bean="animalFacktory" factory-method="getDog"/>
     <bean id="duck" class="cc.momas.spring.core.AnimalFactory.Duck" factory-bean="animalFacktory" factory-method="getDuck"/>
 
+    <!-- 构造参数方式   https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/core.html#beans-factory-collaborators-->
+    <bean id="toy" class="cc.momas.spring.core.Toy">
+        <constructor-arg index="0" name="name" value="小鱼干玩具"/>
+    </bean>
+    <!--  有构造参数的实例构造-->
+    <bean id="cat" class="cc.momas.spring.core.Cat">
+        <!--
+        index 是指定参数的下标，获取不到name指定的参数名时就需要使用index
+        一般使用name指定参数名，value指定参数值就好了
+        -->
+        <constructor-arg index="0" name="age" value="1"/>
+        <constructor-arg index="1" name="name" value="nya"/>
+        <constructor-arg index="2" name="toys" ref="toy"/>
+    </bean>
+
     <!-- more bean definitions for services go here -->
 
 </beans>

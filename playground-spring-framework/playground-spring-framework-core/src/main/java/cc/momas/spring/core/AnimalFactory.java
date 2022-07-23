@@ -1,11 +1,14 @@
 package cc.momas.spring.core;
 
+import java.util.logging.Logger;
+
 /**
  * @author Sod-Momas
  * @since 2022/7/23
  */
 public class AnimalFactory {
     private static final AnimalFactory SIGLETON = new AnimalFactory();
+    private final static Logger logger = Logger.getGlobal();
 
     //    public static Animal birth(String name) {
 //        switch (name) {
@@ -38,24 +41,24 @@ public class AnimalFactory {
     public static class Duck implements Animal {
         @Override
         public void run() {
-            System.out.println("哒哒哒");
+            logger.info("哒哒哒");
         }
 
         @Override
         public void eat() {
-            System.out.println("吃鱼");
+            logger.info("吃鱼");
         }
     }
 
     public static class Dog implements Animal {
         @Override
         public void run() {
-            System.out.println("呼呼呼");
+            logger.info("呼呼呼");
         }
 
         @Override
         public void eat() {
-            System.out.println("吃肉骨头");
+            logger.info("吃肉骨头");
         }
     }
 }

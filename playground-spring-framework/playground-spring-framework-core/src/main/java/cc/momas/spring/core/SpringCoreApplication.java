@@ -39,6 +39,10 @@ public class SpringCoreApplication {
         // 使用实例工厂
         context.getBean("duck", AnimalFactory.Animal.class).run();
         context.getBean("dog", AnimalFactory.Animal.class).run();
+        // 有参构造
+        final Cat cat = context.getBean("cat", Cat.class);
+        logger.info(cat.toString());
+        cat.play();
 
     }
 }
