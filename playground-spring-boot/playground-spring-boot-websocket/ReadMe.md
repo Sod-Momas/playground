@@ -19,3 +19,6 @@ mvn spring-boot:run
 ## 参考链接
 
 - [SpringBoot集成Web Socket，实现后台向前端推送信息](https://mp.weixin.qq.com/s/mXvilrGVu4x30-pAWKlhMw)
+- [springboot整合websocket（四）上传文件（终篇）](https://blog.csdn.net/qq_44938451/article/details/121226239)
+- [SockJS简单介绍](https://blog.csdn.net/john_62/article/details/78208177)
+- [springboot整合websocket实现一对一消息推送和广播消息推送](https://segmentfault.com/a/1190000011908831) STOMP功能

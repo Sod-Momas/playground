@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SockJS test page</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="conn"
+      id="conn"
+      placeholder="http://localhost:8080/echo"
+      value="http://localhost:8080/echo"
+    />
+    <button onclick="openWs()">连接websocket</button>
+    <button onclick="closeWs()">关闭WebSocket连接</button>
+    <br />
+    <input id="text" type="text" placeholder="请输入内容" />
+    <button onclick="send()">发送消息</button>
+    <hr />
+    <div id="message"></div>
+
+    <script src="//cdn.jsdelivr.net/sockjs/1.0.0/sockjs.min.js"></script>
+
+    <script>
+      //将消息显示在网页上
+      function setMessageInnerHTML(innerHTML) {
+        var append = document.createElement("div");
+        append.innerHTML = innerHTML + "<br/>";
+        document.getElementById("message").appendChild(append);
+      }
+      // 打开连接
+      function openWs() {
+        sock = new SockJS(
+          document.getElementById("conn").value || "http://localhost:8080/echo"
+        );
+        sock.onopen = function () {
+          setMessageInnerHTML("websocket onopen");
+        };
+        sock.onmessage = function (e) {
+          console.log("websocket onmessage:", e);
+          setMessageInnerHTML("websocket onmessage:" + e.data);
+        };
+        sock.onclose = function () {
+          setMessageInnerHTML("websocket onclose");
+        };
+        window.sock = sock;
+      }
+      // 关闭连接
+      function closeWs() {
+        window.sock.close();
+      }
+      // 发送消息
+      function send() {
+        var text = document.getElementById("text").value;
+        window.sock.send(text);
+      }
+    </script>
+  </body>
+</html>
