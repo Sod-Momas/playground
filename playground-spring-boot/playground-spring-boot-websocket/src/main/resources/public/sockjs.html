@@ -19,6 +19,9 @@
     <br />
     <input id="text" type="text" placeholder="请输入内容" />
     <button onclick="send()">发送消息</button>
+    <br />
+    <input type="file" name="upload" id="upload" />
+    <button onclick="upload()">上传文件</button>
     <hr />
     <div id="message"></div>
 
@@ -41,7 +44,7 @@
         };
         sock.onmessage = function (e) {
           console.log("websocket onmessage:", e);
-          setMessageInnerHTML("websocket onmessage:" + e.data);
+          setMessageInnerHTML(e.data);
         };
         sock.onclose = function () {
           setMessageInnerHTML("websocket onclose");
@@ -56,6 +59,26 @@
       function send() {
         var text = document.getElementById("text").value;
         window.sock.send(text);
+      }
+      // 上传文件
+      function upload() {
+        var file = document.getElementById("upload").files[0];
+        //    reader.onload = e => {
+        //    var ints = new Uint8Array(e.target.result); //要使用读取的内容，所以将读取内容转化成Uint8Array
+        //    ints = ints.slice(0, 5000); //截取一段读取的内容
+        //    let snippets = new TextDecoder('gb2312').decode(ints); //二进制缓存区内容转化成中文（即也就是读取到的内容）
+        //    console.log("读取的内容如下：");
+        //    console.log(snippets);
+        //     ————————————————
+        //     版权声明：本文为CSDN博主「享有盛誉之名」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+        //     原文链接：https://blog.csdn.net/bbs11007/article/details/114521867
+        // 未成功
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+          console.log("read file onload", e);
+          window.sock.send(e.target.result);
+        };
       }
     </script>
   </body>
