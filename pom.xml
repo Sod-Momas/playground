@@ -41,6 +41,7 @@
         <module>playground-spring-cloud-pivotal</module>
         <module>playground-spring-data</module>
         <module>playground-spring-framework</module>
+        <module>playground-spring-integration</module>
         <module>playground-spring-shell</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
