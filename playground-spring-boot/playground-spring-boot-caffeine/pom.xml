@@ -6,7 +6,7 @@
     <version>1.0</version>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>playground-caffeine-springboot</artifactId>
+    <artifactId>playground-spring-boot-caffeine</artifactId>
 
 
     <properties>
