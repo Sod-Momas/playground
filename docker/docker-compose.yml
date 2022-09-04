@@ -1,39 +1,89 @@
-version: "2"
+version: "3.5"
 services:
-  nacos:
-    image: nacos/nacos-server:2.0.3
-    container_name: nacos-standalone-mysql
-    env_file:
-      - ./nacos.env
+#  nacos:
+#    image: nacos/nacos-server:2.0.3
+#    container_name: nacos-standalone-mysql
+#    env_file:
+#      - ./nacos.env
+##    volumes:
+##      - ./standalone-logs/:/home/nacos/logs
+##      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+#    ports:
+#      - "8848:8848"
+#      - "9848:9848"
+#      - "9555:9555"
+#    depends_on:
+#      - mysql
+#    restart: always
+#
+#  mysql:
+#    container_name: mysql
+#    image: nacos/nacos-mysql:8.0.16
+#    env_file:
+#      - ./mysql.env
+##    volumes:
+##      - /mysql:/var/lib/mysql
+#    ports:
+#      - "3306:3306"
+#  redis:
+#    container_name: redis
+#    image: redis:6.2.6
+#    command: redis-server /etc/redis/redis.conf
 #    volumes:
-#      - ./standalone-logs/:/home/nacos/logs
-#      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+#      - $PWD/data:/data
+#      - ./redis.conf:/etc/redis/redis.conf
+#    ports:
+#      - "6379:6379"
+#    restart: always
+#  elasticsearch7:
+#     container_name: elasticsearch7
+#     image: elasticsearch:7.17.6
+#     ports:
+#       - "9200:9200"
+#       - "9300:9300"
+#     expose:
+#       - 9200
+#     environment:
+#       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#       - cluster.name=momas-es
+#       - bootstrap.memory_lock=true
+#       - discovery.type=single-node
+  skywalking-oap-server:
+    # -javaagent:C:\Programs\skywalking-agent\skywalking-agent.jar
+    # SW_AGENT_COLLECTOR_BACKEND_SERVICES=127.0.0.1:11111;SW_AGENT_NAME=momas-skywalking-demo
+    # https://hub.docker.com/r/apache/skywalking-oap-server
+    # https://skywalking.apache.org/docs/main/latest/en/setup/backend/backend-docker/
+    container_name: skywalking-oap-server
+    image: apache/skywalking-oap-server:8.9.1
     ports:
-      - "8848:8848"
-      - "9848:9848"
-      - "9555:9555"
+      - "12800:12800"
+      - "11111:11800"
+    expose:
+      - 12800
+      - 11800
+#    environment:
+#      - SW_STORAGE=elasticsearch
+#      - SW_STORAGE_ES_CLUSTER_NODES=elasticsearch:9200
+#    depends_on:
+#      - elasticsearch7
+#    links:
+#      - elasticsearch7
+  skywalking-ui:
+    container_name: skywalking-ui
+    image: apache/skywalking-ui:8.9.1
+    environment:
+      # - SW_OAP_ADDRESS=http://localhost:12800
+      # - SW_OAP_ADDRESS=http://skywalking-oap-server:12800
+      - SW_OAP_ADDRESS=skywalking-oap-server:12800
+      # - SW_TIMEOUT=20000
+      - TZ=Asia/Shanghai
+    ports:
+      - "1111:8080"
+      # - "8080:1111"
+      # restart: always
     depends_on:
-      - mysql
-    restart: always
-
-  mysql:
-    container_name: mysql
-    image: nacos/nacos-mysql:8.0.16
-    env_file:
-      - ./mysql.env
-#    volumes:
-#      - /mysql:/var/lib/mysql
-    ports:
-      - "3306:3306"
-  redis:
-    container_name: redis
-    image: redis:6.2.6
-    command: redis-server /etc/redis/redis.conf
-    volumes:
-      - $PWD/data:/data
-      - ./redis.conf:/etc/redis/redis.conf
-    ports:
-      - 6379:6379
-    restart: always
+      - skywalking-oap-server
+    links:
+      - skywalking-oap-server
 
 
