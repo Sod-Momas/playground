@@ -17,6 +17,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <modules>
+        <module>playground-javase-compress</module>
         <module>playground-javase-string</module>
         <module>playground-javase-lambda</module>
         <module>playground-proxy</module>
