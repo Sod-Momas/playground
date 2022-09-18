@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  # https://hub.docker.com/_/zookeeper
+  zookeeper:
+    image: zookeeper:3.8.0
+    # restart: always
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    # volumes:
+    #   - /usr/local/docker/zookeeper/zoo1/data:/data
+    #   - /usr/local/docker/zookeeper/zoo1/datalog:/datalog
+    # environment:
+    #   ZOO_MY_ID: 1
+    #   ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
