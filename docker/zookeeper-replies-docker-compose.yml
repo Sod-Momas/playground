@@ -1,5 +1,7 @@
 version: '3.5'
 services:
+  # docker exec -it <容器id> bash
+  # bin/zkServer.sh status  查看zookeeper集群状态（follower/leader）
   zoo1:
     image: zookeeper
     restart: always
