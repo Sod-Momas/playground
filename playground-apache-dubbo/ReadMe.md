@@ -4,10 +4,10 @@ Spring Boot Dubbo 演示
 
 ## 端口配置
 
-服务                          | 端口
------------------------------|------
-playground-dubbo-provider    | 2200
-playground-dubbo-consumer    | 2201,2202
+| 服务                        | 端口        |
+|---------------------------|-----------|
+| playground-dubbo-provider | 2200      |
+| playground-dubbo-consumer | 2201,2202 |
 
 ## 测试url
 
@@ -17,8 +17,8 @@ playground-dubbo-consumer    | 2201,2202
 
 1. 根据docker-compose.yml 启动服务
 ```bash
-# 在 docker-compose.yml 文件目录下执行该命令， -d 表示后台启动
-docker-compose up -d
+# 在 zookeeper-replices-docker-compose.yml 文件目录下执行该命令， -d 表示后台启动
+docker-compose -f .\zookeeper-replices-docker-compose.yml up -d
 ```
 2. `docker-compose config` 查看配置
 3. `docker exec -it <容器id> bash` 交互式进入容器
