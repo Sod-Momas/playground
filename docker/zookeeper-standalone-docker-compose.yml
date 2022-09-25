@@ -6,7 +6,7 @@ services:
     # restart: always
     container_name: zookeeper
     ports:
-      - "2181:2181"
+      - "2281:2181"
     # volumes:
     #   - /usr/local/docker/zookeeper/zoo1/data:/data
     #   - /usr/local/docker/zookeeper/zoo1/datalog:/datalog

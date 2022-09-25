@@ -22,7 +22,7 @@ public interface AccountService {
 
     String sayHello(String name);
 
-    default CompletableFuture<String> sayHelloAsync(String name) {
-        return CompletableFuture.completedFuture(sayHello(name));
-    }
+//    default CompletableFuture<String> sayHelloAsync(String name) {
+//        return CompletableFuture.completedFuture(sayHello(name));
+//    }
 }

@@ -24,7 +24,7 @@ public class PlaygroundDubboProviderApplication {
 //        log.info("user.home={}",System.getProperty("user.home"));
 //
 //        // 启动内置 zookeeper
-        new EmbeddedZooKeeper(2181, false).start();
+//        new EmbeddedZooKeeper(2181, false).start();
         SpringApplication.run(PlaygroundDubboProviderApplication.class, args);
         log.info("dubbo service started");
     }
