@@ -21,11 +21,11 @@
         <module>playground-javase-string</module>
         <module>playground-javase-lambda</module>
         <module>playground-proxy</module>
-        <module>playground-spi</module>
         <module>playground-javase-collections</module>
         <module>playground-javase-reflect</module>
         <module>playground-javase-properties</module>
         <module>playground-javase-socket</module>
+        <module>playground-javase-spi</module>
         <module>playground-javase-thread</module>
         <module>playground-javase-io</module>
         <module>playground-javase-future</module>

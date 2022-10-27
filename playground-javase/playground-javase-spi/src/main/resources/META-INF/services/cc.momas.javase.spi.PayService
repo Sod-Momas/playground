@@ -1,0 +1,4 @@
+# 文件名是接口全类名
+# 这里一行一个实现类的全类名, 可以把它抽取到其他的 maven 模板里实现解耦, 只要反射能实例化, 什么都好说
+cc.momas.javase.spi.AliPayService
+cc.momas.javase.spi.WxPayService

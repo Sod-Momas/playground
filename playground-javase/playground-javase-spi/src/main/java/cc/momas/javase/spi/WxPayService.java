@@ -1,6 +1,4 @@
-package cc.momas.impl;
-
-import cc.momas.PayService;
+package cc.momas.javase.spi;
 
 public class WxPayService implements PayService {
     @Override

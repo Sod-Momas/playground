@@ -1,11 +1,9 @@
-package cc.momas.impl;
-
-import cc.momas.PayService;
+package cc.momas.javase.spi;
 
 public class AliPayService implements PayService {
     @Override
     public int pay(int price) {
-        System.out.print("ali pay ");
+        System.out.print("ali payed ");
         return price;
     }
 }
