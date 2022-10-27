@@ -5,13 +5,9 @@ public class AppMain {
     public static void main(String[] args) {
         User user = new User();
         user.setAge(120);
-        user.setName("aaa");
+        user.setName("Sod-Momas");
 
-        try {
-            // 验证
-            ValidationUtil.validate(user);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // 验证
+        ValidationUtil.validate(user);
     }
 }
