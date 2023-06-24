@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh_CN">
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,8 +14,8 @@
 </div>
 <div>
     <ul>
-        <li><a href="form.html">form test</a></li>
-        <li><a href="objs.html">内置对象、方法使用预览</a></li>
+        <li><a th:href="@{/thymeleaf/form.html}">form test</a></li>
+        <li><a th:href="@{/thymeleaf/demos.html}">内置对象、方法使用预览</a></li>
     </ul>
 </div>
 </body>

@@ -1,4 +1,4 @@
-package cc.momas.spring.boot.web.thymemleaf;
+package cc.momas.spring.boot.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,22 +21,23 @@ public class ThymemleafController implements WebMvcConfigurer {
 //        return "thymeleaf/index.html";
 //    }
 
-    @RequestMapping("thymeleaf/objs.html")
+    @RequestMapping("thymeleaf/demos.html")
     ModelAndView objs(ModelAndView mav) {
         Map<String, Object> user = new HashMap<>();
         user.put("username", "Sod-Momas");
         user.put("age", 18);
         user.put("mobile", "10086");
         mav.addObject("user", user);
-        mav.setViewName("thymeleaf/objs.html");
+        mav.setViewName("thymeleaf/demos.html");
         return mav;
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/thymeleaf").setViewName("thymeleaf/index.html");
-        registry.addViewController("/thymeleaf/index").setViewName("thymeleaf/index.html");
-        registry.addViewController("/thymeleaf/index.html").setViewName("thymeleaf/index.html");
-//        registry.addViewController("/thymeleaf/objs.html").setViewName( "thymeleaf/objs.html");
+        registry.addRedirectViewController("/thymeleaf/index", "/thymeleaf");
+        registry.addRedirectViewController("/thymeleaf/index.html", "/thymeleaf");
+        registry.addViewController("/thymeleaf/form.html").setViewName("thymeleaf/form.html");
+//        registry.addViewController("/thymeleaf/demos.html").setViewName("thymeleaf/demos.html");
     }
 }

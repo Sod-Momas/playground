@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh_CN">
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,9 +8,15 @@
     <title>thymeleaf form</title>
 </head>
 <body>
-<p>这是thymeleaf的表单演示页面</p>
+<p>这是thymeleaf的表单演示页面 <small> <a th:href="@{/}">返回首页</a></small> </p>
 <div>
-    <form action=""></form>
+    <form method="post" th:action="@{/thymeleaf/form}">
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username">
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password">
+        <input type="button" value="提交">
+    </form>
 </div>
 </body>
 </html>
