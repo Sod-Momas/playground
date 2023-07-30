@@ -20,12 +20,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Component
 @ServerEndpoint("/ws/hello/{sid}")
-public class HelloEndPoint {
-    private static final Logger log = LoggerFactory.getLogger(HelloEndPoint.class);
+public class WebsocketHelloEndPoint {
+    private static final Logger log = LoggerFactory.getLogger(WebsocketHelloEndPoint.class);
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
     private static final AtomicInteger onlineCount = new AtomicInteger();
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
-    private static final Set<HelloEndPoint> clients = new CopyOnWriteArraySet<>();
+    private static final Set<WebsocketHelloEndPoint> clients = new CopyOnWriteArraySet<>();
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
     //接收sid
@@ -72,7 +72,7 @@ public class HelloEndPoint {
     public void onMessage(String message, Session session) {
         log.info("收到来自窗口" + sid + "的信息:" + message);
         //群发消息
-        for (HelloEndPoint item : clients) {
+        for (WebsocketHelloEndPoint item : clients) {
             try {
                 item.sendMessage(sid + " 说： " + message);
             } catch (IOException e) {
@@ -110,7 +110,7 @@ public class HelloEndPoint {
         onlineCount.decrementAndGet();
     }
 
-    public static Set<HelloEndPoint> getClients() {
+    public static Set<WebsocketHelloEndPoint> getClients() {
         return clients;
     }
 }
