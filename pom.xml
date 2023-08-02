@@ -44,6 +44,7 @@
         <module>playground-spring-shell</module>
         <module>playground-sql</module>
         <module>playground-webjars</module>
+        <module>playground-itext7</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
