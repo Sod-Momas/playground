@@ -94,14 +94,14 @@ openjdk                            jre                 6b23d41384f9        5 mon
 
 - `[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 50, column 21`
 
-    这个警告的消除办法是给 `spring-boot-maven-plugin` 加上版本号, 例如本项目使用的 2.3.7.RELEASE 版本, 所以加上版本号 `2.3.7.RELEASE`,
+    这个警告的消除办法是给 `spring-boot-maven-plugin` 加上版本号, 例如本项目使用的 2.3.12.RELEASE 版本, 所以加上版本号 `2.3.12.RELEASE`,
     加上之后插件配置为
 
     ```xml
     <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.3.7.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
     </plugin>
     ```
 
@@ -114,7 +114,7 @@ openjdk                            jre                 6b23d41384f9        5 mon
     <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.3.7.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
         <executions>
             <execution>
                 <phase>package</phase>

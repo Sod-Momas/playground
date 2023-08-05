@@ -15,7 +15,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
         <spring.version>5.2.12.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -38,7 +38,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>2.3.7.RELEASE</version>
+                    <version>2.3.12.RELEASE</version>
                     <configuration>
                         <mainClass>cc.momas.spring.shell.PlaygroundSpringShellApplication</mainClass>
                     </configuration>
