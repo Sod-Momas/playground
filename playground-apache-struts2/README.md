@@ -12,11 +12,7 @@
 mvn jetty:run
 ```
 
-项目就开始编译并运行了. 然后打开浏览器访问下列任意URL就可以访问首页了.
-
-- `http://localhost:8080/basic-struts/index`
-- `http://localhost:8080/basic-struts/index.action`
-- `http://localhost:8080/basic-struts/index.jsp`
+项目就开始编译并运行了. 然后打开浏览器访问 http://localhost:8080 访问首页.
 
 退出服务器请使用 `Ctrl + C` 停止
 
@@ -29,3 +25,4 @@ mvn jetty:run
 - [struts2中访问静态资源](https://blog.csdn.net/aw20076410/article/details/102272808)
 - [<c:if> 标签](https://www.runoob.com/jsp/jstl-core-if-tag.html) JSTL 教程
 - [Struts2获取表单数据总结](https://blog.csdn.net/weixin_40425481/article/details/80303659) 注意设置getter/setter
+- [jetty启动失败 [WARNING] Failed startup of context o.e.j.m.p.JettyWebAppContext@7f572c37{/, (学习Dubbo时)](https://blog.csdn.net/a111042555/article/details/125370360)
