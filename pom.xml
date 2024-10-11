@@ -24,6 +24,7 @@
         <module>playground-easyexcel</module>
         <module>playground-hexdump</module>
         <module>playground-javase</module>
+        <module>playground-jedis</module>
 <!--        <module>playground-jersey</module>-->
         <module>playground-jol</module>
         <module>playground-javaee</module>
